@@ -1,0 +1,10 @@
+#!/Users/jackdan/Documents/workspace/soil/soil/.venv/bin/python
+# PBR Generated from 'console_scripts'
+
+import sys
+
+from soil.cmd.engine import main
+
+
+if __name__ == "__main__":
+    sys.exit(main())

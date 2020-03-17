@@ -1,0 +1,10 @@
+#!/Users/jackdan/Documents/workspace/soil/soil/.venv/bin/python3.6
+# PBR Generated from 'console_scripts'
+
+import sys
+
+from sqlparse.__main__ import main
+
+
+if __name__ == "__main__":
+    sys.exit(main())

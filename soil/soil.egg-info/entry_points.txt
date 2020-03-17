@@ -1,0 +1,7 @@
+[console_scripts]
+soil-api = soil.cmd.api:main
+soil-engine = soil.cmd.engine:main
+
+[oslo.config.opts]
+soil = soil.conf.opts:list_opts
+
