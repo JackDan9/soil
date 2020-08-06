@@ -19,22 +19,14 @@
 
 from oslo_config import cfg
 
-from soil.conf import exception
-from soil.conf import wsgi
-from soil.conf import rpc
-from soil.conf import service
-from soil.conf import engine
+from soil.conf import api
 from soil.conf import database
-from soil.conf import paths
-from soil.conf import extension
+from soil.conf import rpc
 
 CONF = cfg.CONF
 
-exception.register_opts(CONF)
-wsgi.register_opts(CONF)
+
+# api.register_opts(CONF)
+# database.register_opts(CONF)
+
 rpc.register_opts(CONF)
-service.register_opts(CONF)
-engine.register_opts(CONF)
-database.register_opts(CONF)
-paths.register_opts(CONF)
-extension.register_opts(CONF)

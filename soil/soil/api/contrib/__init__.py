@@ -1,5 +1,5 @@
-# Copyright 2011 OpenStack Foundation
-#
+# Copyright 2010 United States Government as represented by the
+# Administrator of the National Aeronautics and Space Administration.
 # All Rights Reserved.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -14,17 +14,19 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-"""Contrib contains extensions that are shipped with hamal.
+"""Contrib contains extensions that are shipped with soil.
 
 It can't be called 'extensions' because that causes namespacing problems.
 
 """
 
+from oslo_config import cfg
 from oslo_log import log as logging
 
 from soil.api import extensions
 
 
+CONF = cfg.CONF
 LOG = logging.getLogger(__name__)
 
 

@@ -17,39 +17,20 @@
 
 """Implementation of SQLAlchemy backend."""
 
-from oslo_db.sqlalchemy import enginefacade
+import collections
+import copy
+import datetime
+import functools
+import inspect
+import sys
+
 from oslo_log import log as logging
-from oslo_utils import importutils
 
 import soil.conf
-
-profiler_sqlalchemy = importutils.try_import('osprofiler.sqlalchemy')
+from soil.i18n import _
 
 CONF = soil.conf.CONF
 
 
 LOG = logging.getLogger(__name__)
 
-main_context_manager = enginefacade.transaction_context()
-# api_context_manager = enginefacade.transaction_context()
-
-
-def _get_db_conf(conf_group, connection=None):
-    kw = dict(conf_group.items())
-    if connection is not None:
-        kw['connection'] = connection
-    return kw 
-
-
-def configure(conf):
-    main_context_manager.configure(**_get_db_conf(conf.database))
-    # api_context_manager.configure(**_get_db_conf(conf.api_database))
-
-    if profiler_sqlalchemy and CONF.profiler.enabled and CONF.profiler.trace_sqlalchemy:
-
-        main_context_manager.append_on_engine_create(
-            lambda eng: profiler_sqlalchemy.add_tracing(sa, eng, "db"))
-        # api_context_manager.append_on_engine_create(
-            # lambda eng: profiler_sqlalchemy.add_tracing(sa, eng, "db"))
-        
-    

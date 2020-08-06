@@ -16,22 +16,24 @@
 
 """Starter script for Soil API.
 
-Starts both the VMware and OpenStack APIs in separate greenthreads.
+Starts the VMware and Openstack APIs in separate greenthreads.
 
 """
 
 import sys
 
+
 import eventlet
+from oslo_config import cfg
 from oslo_log import log as logging
 from oslo_reports import opts as gmr_opts
 
 # Need to register global_opts
-import soil.conf
 from soil import config
 from soil import service
 
-CONF = soil.conf.CONF
+CONF = cfg.CONF
+logging.register_options(CONF)
 
 
 def main():

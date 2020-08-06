@@ -50,4 +50,3 @@ def register_opts(conf):
 
 def list_opts():
     return {'DEFAULT': ALL_OPTS}
- 

@@ -12,11 +12,11 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-import pbr.version
+from pbr import version as pbr_version
 
-SOIL_VERDOR = "Open Community"
-SOIL_RPODUCT = "Open Community Soil"
+SOIL_VENDOR = "Source Community"
+SOIL_PRODUCT = "Source Community Soil"
 
 loaded = False
-version_info = pbr.version.VersionInfo('soil')
+version_info = pbr_version.VersionInfo('soil')
 version_string = version_info.version_string

@@ -16,17 +16,25 @@
 
 import os
 
+from oslo_config import cfg
 from oslo_log import log as logging
 from oslo_utils import importutils
 import webob.dec
 import webob.exc
 
-import soil.conf
 from soil.api.server import wsgi
 from soil import exception
 
-CONF = soil.conf.CONF
+
+extension_opts = [
+    cfg.MultiStrOpt(
+        'soil_api_extension',
+        default=['soil.api.contrib.standard_extensions'],
+        help='soil extension to load')]
+
+CONF = cfg.CONF
 LOG = logging.getLogger(__name__)
+CONF.register_opts(extension_opts)
 
 
 class ExtensionDescriptor(object):
@@ -225,9 +233,9 @@ class ExtensionManager(object):
 
 
 class ControllerExtension(object):
-    """Extend core controllers of Hamal API.
+    """Extend core controllers of Soil API.
 
-    Provide a way to extend existing Hamal API core
+    Provide a way to extend existing Soil API core
     controllers.
     """
 
@@ -238,7 +246,7 @@ class ControllerExtension(object):
 
 
 class ResourceExtension(object):
-    """Add top level resources to the API in hamal."""
+    """Add top level resources to the API in soil."""
 
     def __init__(self, collection, controller, parent=None,
                  collection_actions=None, member_actions=None,

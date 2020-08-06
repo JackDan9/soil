@@ -18,51 +18,50 @@
 Base RPC client and server common to all services.
 """
 
+from oslo_config import cfg
 import oslo_messaging as messaging
 from oslo_serialization import jsonutils
 
-import soil.conf
 from soil import rpc
 
 
-CONF = soil.conf.CONF
+CONF = cfg.CONF
 
-_NAMESPACE = "baseapi"
+_NAMESPACE = 'baseapi'
 
 
 class BaseAPI(object):
-    """Client side of the base rpc API.
-    
-    API version history:
+  """Client side of the base rpc API.
+  
+  API version history:
 
-        1.0.0 - Initial version
-    
-    """
-    VERSION_ALIASES = {
-        # baseapi was added in havana
-    }
+      1.0 - Initial Version
+  """
 
-    def __init__(self, topic):
-        super(BaseAPI, self).__init__()
-        target = messaging.Target(topic=topic,
-                                  namespace=_NAMESPACE,
-                                  version='1.0.0')
-        self.client = rpc.get_client(target)
-    
-    def ping(self, context, arg, timeout=None):
-        arg_p = jsonutils.to_primitive(arg)
-        cctxt = self.client.prepare(timeout=timeout)
-        return cctxt.call(context, 'ping', arg=arg_p)
+  VERSION_ALIASES = {
+  }
+
+  def __init__(self, topic):
+    super(BaseAPI, self).__init__()
+    target = messaging.Target(topic=topic,
+                              namespace=_NAMESPACE,
+                              version='1.0')
+    self.client = rpc.get_client(target)
+
+  def ping(self, context, arg, timeout=None):
+    arg_p = jsonutils.to_primitive(arg)
+    cctxt = self.client.prepare(timeout=timeout)
+    return cctxt.call(context, 'ping', arg=arg_p)
 
 
 class BaseRPCAPI(object):
-    """Server side of the base RPC API."""
+  """Server side of the base RPC API."""
 
-    target = messaging.Target(namespace=_NAMESPACE, version='1.0.0')
-    
-    def __init__(self, service_name):
-        self.service_name = service_name
-    
-    def ping(self, context, arg):
-        resp = {'service': self.service_name, 'arg': arg}
-        return jsonutils.to_primitive(resp)
+  target = messaging.Target(namespace=_NAMESPACE, version='1.0')
+
+  def __init__(self, service_name):
+    self.service_name = service_name
+
+  def ping(self, context, arg):
+    resp = {'service': self.service_name, 'arg': arg}
+    return jsonutils.to_primitive(resp)

@@ -1,0 +1,18 @@
+#node_modules
+/soil-dashboard-ts/node_modules
+
+#System Files
+.DS_Store
+
+#Python Virtualenv Files
+soil/.venv/*
+
+
+#IDE VSCode Files
+/soil-dashboard-ts/.vscode/*
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*

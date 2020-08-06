@@ -19,7 +19,7 @@ import webob.exc
 
 from soil.api.server import wsgi
 from soil import exception
-from soil.i18n import _, _LI, _LE, _LW, _LC
+from soil.i18n import _
 from soil.wsgi import common as base_wsgi
 
 LOG = logging.getLogger(__name__)
@@ -28,7 +28,7 @@ LOG = logging.getLogger(__name__)
 class FaultWrapper(base_wsgi.Middleware):
     """Calls down the middleware stack, making exceptions into faults."""
 
-    _status_to_type = {}
+    _status_to_type = dict()
 
     @staticmethod
     def status_to_type(status):
@@ -62,7 +62,7 @@ class FaultWrapper(base_wsgi.Middleware):
         # inconsistent with the EC2 API to hide every exception,
         # including those that are safe to expose, see bug 1021373
         if safe:
-            msg = (inner.msg if isinstance(inner, exception.HamalException)
+            msg = (inner.msg if isinstance(inner, exception.SoilException)
                    else six.text_type(inner))
             params = {'exception': inner.__class__.__name__,
                       'explanation': msg}

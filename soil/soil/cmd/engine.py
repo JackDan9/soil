@@ -1,6 +1,8 @@
+# Copyright (c) 2011 X.commerce, a business unit of eBay Inc.
 # Copyright 2010 United States Government as represented by the
 # Administrator of the National Aeronautics and Space Administration.
 # All Rights Reserved.
+# Copyright 2013 Red Hat, Inc.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
 #    not use this file except in compliance with the License. You may obtain
@@ -14,27 +16,22 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-"""Starter script for Soil Engine.
-
-1. Configuration
-Modify configuration in the file `/etc/soil/soil.conf`
-
-2. Run
-soil-engine --config-file /etc/soil/soil.conf
-
 """
+  CLI interface for soil management.
+"""
+
+from __future__ import print_function
 
 import sys
 
-
 import eventlet
+from oslo_config import cfg
 from oslo_log import log as logging
 
-import soil.conf
 from soil import config
-from soil import service 
+from soil import service
 
-CONF = soil.conf.CONF
+CONF = cfg.CONF
 
 
 def main():
