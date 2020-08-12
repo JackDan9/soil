@@ -7,19 +7,20 @@
 import ProLayout, {
   MenuDataItem,
   BasicLayoutProps as ProLayoutProps,
-  Settings,
-} from '@ant-design/pro-layout';
-import React, { useEffect } from 'react';
-import Link from 'umi/link';
-import { connect } from 'dva';
-import { formatMessage } from 'umi-plugin-react/locale';
+  Settings
+} from "@ant-design/pro-layout";
+import React, { useEffect, Fragment } from "react";
+import { Layout, Icon } from "antd";
+import Link from "umi/link";
+import { connect } from "dva";
+import { formatMessage } from "umi-plugin-react/locale";
 
-import Authorized from '@/utils/Authorized';
-import RightContent from '@/components/GlobalHeader/RightContent';
-import { ConnectState, Dispatch } from '@/models/connect';
-import { isSoilPro } from '@/utils/utils';
-import Footer from './Footer';
-import logo from '../assets/logo.svg';
+import Authorized from "@/utils/Authorized";
+import RightContent from "@/components/GlobalHeader/RightContent";
+import { ConnectState, Dispatch } from "@/models/connect";
+import { isSoilPro } from "@/utils/utils";
+import GlobalFooter from "@/components/GlobalFooter";
+import logo from "../assets/logo.svg";
 
 export interface BasicLayoutProps extends ProLayoutProps {
   breadcrumbNameMap: {
@@ -28,11 +29,13 @@ export interface BasicLayoutProps extends ProLayoutProps {
   settings: Settings;
   dispatch: Dispatch;
 }
-export type BasicLayoutContext = { [K in 'location']: BasicLayoutProps[K] } & {
+export type BasicLayoutContext = { [K in "location"]: BasicLayoutProps[K] } & {
   breadcrumbNameMap: {
     [path: string]: MenuDataItem;
   };
 };
+
+const { Footer } = Layout;
 
 /**
  * use Authorized check all menu item
@@ -41,25 +44,61 @@ const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
   menuList.map(item => {
     const localItem = {
       ...item,
-      children: item.children ? menuDataRender(item.children) : [],
+      children: item.children ? menuDataRender(item.children) : []
     };
     return Authorized.check(item.authority, localItem, null) as MenuDataItem;
   });
 
-const footerRender: BasicLayoutProps['footerRender'] = (_, defaultDom) => {
+const defaultFooter = (
+  <Footer style={{ padding: 0 }}>
+    <GlobalFooter
+      links={[
+        {
+          key: "Soil Dashboard",
+          title: "Soil Dashboard",
+          href: "/",
+          blankTarget: true
+        },
+        {
+          key: "github",
+          title: <Icon type="github" />,
+          href: "https://github.com/JackDan",
+          blankTarget: true
+        },
+        {
+          key: "Soil",
+          title: "Soil",
+          href: "/",
+          blankTarget: true
+        }
+      ]}
+      copyright={
+        <Fragment>
+          Copyright <Icon type="copyright" /> 2020 JackDan Open Source Community
+        </Fragment>
+      }
+    />
+  </Footer>
+);
+
+const footerRender: BasicLayoutProps["footerRender"] = () => {
   if (!isSoilPro()) {
-    return defaultDom;
+    return defaultFooter;
   }
   return (
     <>
-      {defaultDom}
+      {defaultFooter}
       <div
         style={{
-          padding: '0px 24px 24px',
-          textAlign: 'center',
+          padding: "0px 24px 24px",
+          textAlign: "center"
         }}
       >
-        <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.netlify.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"
             width="82px"
@@ -80,10 +119,10 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
   useEffect(() => {
     if (dispatch) {
       dispatch({
-        type: 'user/fetchCurrent',
+        type: "user/fetchCurrent"
       });
       dispatch({
-        type: 'settings/getSetting',
+        type: "settings/getSetting"
       });
     }
   }, []);
@@ -94,8 +133,8 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
   const handleMenuCollapse = (payload: boolean): void =>
     dispatch &&
     dispatch({
-      type: 'global/changeLayoutCollapsed',
-      payload,
+      type: "global/changeLayoutCollapsed",
+      payload
     });
 
   return (
@@ -110,18 +149,18 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
       }}
       breadcrumbRender={(routers = []) => [
         {
-          path: '/',
+          path: "/",
           breadcrumbName: formatMessage({
-            id: 'menu.home',
-            defaultMessage: 'Home',
-          }),
+            id: "menu.home",
+            defaultMessage: "Home"
+          })
         },
-        ...routers,
+        ...routers
       ]}
       itemRender={(route, params, routes, paths) => {
         const first = routes.indexOf(route) === 0;
         return first ? (
-          <Link to={paths.join('/')}>{route.breadcrumbName}</Link>
+          <Link to={paths.join("/")}>{route.breadcrumbName}</Link>
         ) : (
           <span>{route.breadcrumbName}</span>
         );
@@ -140,5 +179,5 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
 
 export default connect(({ global, settings }: ConnectState) => ({
   collapsed: global.collapsed,
-  settings,
+  settings
 }))(BasicLayout);

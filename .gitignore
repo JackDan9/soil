@@ -6,6 +6,7 @@
 
 #Python Virtualenv Files
 soil/.venv/*
+soil/.venv
 
 
 #IDE VSCode Files
@@ -16,3 +17,7 @@ soil/.venv/*
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+
+#UMI Files
+.umi
+*/.umi
