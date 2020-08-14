@@ -1,3 +1,4 @@
+# Copyright 2020 Soil, Inc.
 # Copyright 2011 OpenStack Foundation
 #
 # All Rights Reserved.
@@ -37,7 +38,7 @@ class APIMapper(routes.Mapper):
         return routes.Mapper.routematch(self, url, environ)
     
     def connect(self, *args, **kwargs):
-        # Note(inhye): Default the format part of a route to only accept json
+        # Note(jackdan): Default the format part of a route to only accept json
         # so it doesn't eat all characters after a '.'
         # in the url.
         kwargs.setdefault('requirements', {})

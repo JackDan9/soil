@@ -26,6 +26,6 @@ SQLAlchemy!=1.1.5,!=1.1.6,!=1.1.7,!=1.1.8,>=1.0.10 # MIT
 WebOb>=1.6.0 # MIT
 
 # Add dependency packages for vmware
-PyMySQL>=0.7.9
-pyvmomi>=6.7
+pymysql>=0.9.3
+pyvmomi>=6.7.1
 cryptography>=1.3.1

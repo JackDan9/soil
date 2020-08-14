@@ -23,7 +23,7 @@ _DEFAULT_SQL_CONNECTION = 'mysql+pymsql://root:secret@localhost/soil'
 _ENRICHED = False
 
 
-# NOTE(dan): We cannot simply to:
+# NOTE(jackdan): We cannot simply to:
 # conf.register_opts(oslo_db_options.database_opts, 'api_database')
 # If we reuse a db config option option for two different groups ("api_database" 
 # and "database") and depreate or rename a config option in one of these 
@@ -39,7 +39,7 @@ api_db_group = cfg.OptGroup('api_database',
 )
 
 api_db_opts = [
-    # TODO(dan): This should probably have a required=True attribute
+    # TODO(jackdan): This should probably have a required=True attribute
     cfg.StrOpt('connection',
         secret=True,
         # This help gets appended to the oslo.db help so prefix with a space.
@@ -58,7 +58,7 @@ def enrich_help_text(alt_db_opts):
     for db_opt in get_db_opts():
         for alt_db_opt in alt_db_opts:
             if alt_db_opt.name == db_opt.name:
-                # NOTE(dan): We can append alternative DB specific help
+                # NOTE(jackdan): We can append alternative DB specific help
                 # texts here if needed.
                 alt_db_opt.help = db_opt.help + alt_db_opt.help
 
@@ -67,10 +67,10 @@ def register_opts(conf):
     conf.register_opts(api_db_opts, group=api_db_group)
 
 def list_opts():
-    # NOTE(dan): 2019-04-04: If we list the oslo_db_options here, they
+    # NOTE(jackdan): 2020-04-04: If we list the oslo_db_options here, they
     # get emitted twice(!) in the "sample.conf" file. First under the
-    # namespace "nova.conf" and second under the namespace "oslo.db". This
-    # is due to the setting in file "etc/soil/soil.conf".
+    # namespace "soil.conf" and second under the namespace "oslo.db". This
+    # is due to the setting in file "/etc/soil/soil.conf".
     # As I think it is useful to have the "oslo.db" namespace information
     # in the "sample.conf" file, I omit the listing of the "oslo_db_options"
     # here.

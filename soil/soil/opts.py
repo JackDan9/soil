@@ -11,10 +11,14 @@ from soil.wsgi import server
 
 
 def list_opts():
-  """Entry point for oslo-config-generator"""
-  return [('DEFAULT', itertools.chain(
-    copy.deepcopy(auth.auth_opts),
-    copy.deepcopy(extensions.extension_opts),
-    copy.deepcopy(manager.engine_opts),
-    copy.deepcopy(server.wsgi_opts)
-  ))]
+    """Entry point for oslo-config-generator"""
+    return [
+        (
+            'DEFAULT', itertools.chain(
+                copy.deepcopy(auth.auth_opts),
+                copy.deepcopy(extensions.extension_opts),
+                copy.deepcopy(manager.engine_opts),
+                copy.deepcopy(server.wsgi_opts)
+            )
+        )
+    ]
