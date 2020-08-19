@@ -1,3 +1,9 @@
+/**
+ * Ant Design Pro v4 use `@ant-design/pro-layout` to handle Layout.
+ * You can view component api by:
+ * https://github.com/ant-design/ant-design-pro-layout
+ */
+
 import React, { Fragment } from "react";
 import { Layout, Icon } from "antd";
 import GlobalFooter from "@/components/GlobalFooter";
@@ -9,8 +15,8 @@ const FooterView = () => (
     <GlobalFooter
       links={[
         {
-          key: "Soil Home",
-          title: "Soil Home",
+          key: "Soil",
+          title: "Soil",
           href: "/",
           blankTarget: true
         },
