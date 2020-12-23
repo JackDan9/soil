@@ -21,6 +21,7 @@ from soil.api.server import wsgi
 from soil.api import versions
 from soil.api.v1.openstack.compute import instances
 from soil.api.v1.openstack.network import networks
+from soil.api.v1.vmware.vcenter import vcenter
 
 
 def _create_controller(main_controller, action_controller_list):
@@ -43,7 +44,8 @@ instances_controller = functools.partial(_create_controller,
 networks_controller = functools.partial(_create_controller, 
    networks.NetworksController,  [])
 
-
+vcenter_controller = functools.partial(_create_controller,
+    vcenter.vCenterController, [])
 
 
 ROUTE_LIST = (
@@ -60,6 +62,9 @@ ROUTE_LIST = (
     }),
     ('/osp/networks', {
         'POST': [networks_controller, 'create'],
+    }),
+    ('/vmware/vcenter', {
+        'GET': []
     })
 )
 
