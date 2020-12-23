@@ -1,183 +1,188 @@
-import { Request, Response } from 'express';
+import { Request, Response } from "express";
 // 代码中会兼容本地 service mock 以及部署站点的静态数据
 export default {
   // 支持值为 Object 和 Array
-  'GET /api/currentUser': {
-    name: 'JackDan',
-    avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
-    userid: '00000001',
-    email: '1835812864@qq.com',
-    signature: '海纳百川，有容乃大',
-    title: '交互专家',
-    group: '蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED',
+  "GET /api/currentUser": {
+    name: "JackDan",
+    avatar:
+      "https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png",
+    userid: "00000001",
+    email: "1835812864@qq.com",
+    signature: "海纳百川，有容乃大",
+    title: "交互专家",
+    group: "蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED",
     tags: [
       {
-        key: '0',
-        label: '很有想法的',
+        key: "0",
+        label: "很有想法的"
       },
       {
-        key: '1',
-        label: '专注设计',
+        key: "1",
+        label: "专注设计"
       },
       {
-        key: '2',
-        label: '辣~',
+        key: "2",
+        label: "辣~"
       },
       {
-        key: '3',
-        label: '大长腿',
+        key: "3",
+        label: "大长腿"
       },
       {
-        key: '4',
-        label: '川妹子',
+        key: "4",
+        label: "川妹子"
       },
       {
-        key: '5',
-        label: '海纳百川',
-      },
+        key: "5",
+        label: "海纳百川"
+      }
     ],
     notifyCount: 12,
     unreadCount: 11,
-    country: 'China',
+    country: "China",
     geographic: {
       province: {
-        label: '浙江省',
-        key: '330000',
+        label: "浙江省",
+        key: "330000"
       },
       city: {
-        label: '杭州市',
-        key: '330100',
-      },
+        label: "杭州市",
+        key: "330100"
+      }
     },
-    address: '西湖区工专路 77 号',
-    phone: '0752-268888888',
+    address: "西湖区工专路 77 号",
+    phone: "0752-268888888"
   },
   // GET POST 可省略
-  'GET /api/users': [
+  "GET /api/users": [
     {
-      key: '1',
-      name: 'John Brown',
+      key: "1",
+      name: "John Brown",
       age: 32,
-      address: 'New York No. 1 Lake Park',
+      address: "New York No. 1 Lake Park"
     },
     {
-      key: '2',
-      name: 'Jim Green',
+      key: "2",
+      name: "Jim Green",
       age: 42,
-      address: 'London No. 1 Lake Park',
+      address: "London No. 1 Lake Park"
     },
     {
-      key: '3',
-      name: 'Joe Black',
+      key: "3",
+      name: "Joe Black",
       age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    },
+      address: "Sidney No. 1 Lake Park"
+    }
   ],
-  'POST /api/login/account': (req: Request, res: Response) => {
-    const { password, userName, type } = req.body;
-    if (password === 'passw0rd' && userName === 'admin') {
+  "POST /api/login/account": (req: Request, res: Response) => {
+    const { password, username, type } = req.body;
+    if (password === "passw0rd" && username === "admin") {
       res.send({
-        status: 'ok',
+        status: "ok",
         type,
-        currentAuthority: 'admin',
-        roleId: 'admin',
+        currentAuthority: "admin",
+        roleId: "admin",
         roleObj: {
-          'id': 'admin',
-          'name': '管理员',
-          'describe': '拥有所有权限',
-          'status': 1,
-          'creatorId': 'system',
-          'createTime': 1590078882,
-          'deleted': 0,
-          'permissions': [{
-            'roleId': 'admin',
-            'permissionId': 'dashboard',
-            'permissionName': '仪表盘',
-            'actions': '[{"action":"add","defaultCheck":false,"describe":"新增"},{"action":"query","defaultCheck":false,"describe":"查询"},{"action":"get","defaultCheck":false,"describe":"详情"},{"action":"update","defaultCheck":false,"describe":"修改"},{"action":"delete","defaultCheck":false,"describe":"删除"}]',
-            'actionEntitySet': [
-              {
-                "action":"add",
-                "defaultCheck":false,
-                "describe":"新增"
-              },
-              {
-                "action":"query",
-                "defaultCheck":false,
-                "describe":"查询"
-              },
-              {
-                "action":"get",
-                "defaultCheck":false,
-                "describe":"详情"
-              },
-              {
-                "action":"update",
-                "defaultCheck":false,
-                "describe":"修改"
-              },
-              {
-                "action":"delete",
-                "defaultCheck":false,
-                "describe":"删除"
-              }],
-              'actionList': null,
-              'dataAccess': null
-          }]
+          id: "admin",
+          name: "管理员",
+          describe: "拥有所有权限",
+          status: 1,
+          creatorId: "system",
+          createTime: 1590078882,
+          deleted: 0,
+          permissions: [
+            {
+              roleId: "admin",
+              permissionId: "dashboard",
+              permissionName: "仪表盘",
+              actions:
+                '[{"action":"add","defaultCheck":false,"describe":"新增"},{"action":"query","defaultCheck":false,"describe":"查询"},{"action":"get","defaultCheck":false,"describe":"详情"},{"action":"update","defaultCheck":false,"describe":"修改"},{"action":"delete","defaultCheck":false,"describe":"删除"}]',
+              actionEntitySet: [
+                {
+                  action: "add",
+                  defaultCheck: false,
+                  describe: "新增"
+                },
+                {
+                  action: "query",
+                  defaultCheck: false,
+                  describe: "查询"
+                },
+                {
+                  action: "get",
+                  defaultCheck: false,
+                  describe: "详情"
+                },
+                {
+                  action: "update",
+                  defaultCheck: false,
+                  describe: "修改"
+                },
+                {
+                  action: "delete",
+                  defaultCheck: false,
+                  describe: "删除"
+                }
+              ],
+              actionList: null,
+              dataAccess: null
+            }
+          ]
         }
       });
       return;
     }
-    if (password === 'passw0rd' && userName === 'user') {
+    if (password === "passw0rd" && username === "user") {
       res.send({
-        status: 'ok',
+        status: "ok",
         type,
-        currentAuthority: 'user',
+        currentAuthority: "user"
       });
       return;
     }
     res.send({
-      status: 'error',
+      status: "error",
       type,
-      currentAuthority: 'guest',
+      currentAuthority: "guest"
     });
   },
-  'POST /api/register': (req: Request, res: Response) => {
-    res.send({ status: 'ok', currentAuthority: 'user' });
+  "POST /api/register": (req: Request, res: Response) => {
+    res.send({ status: "ok", currentAuthority: "user" });
   },
-  'GET /api/500': (req: Request, res: Response) => {
+  "GET /api/500": (req: Request, res: Response) => {
     res.status(500).send({
       timestamp: 1513932555104,
       status: 500,
-      error: 'error',
-      message: 'error',
-      path: '/base/category/list',
+      error: "error",
+      message: "error",
+      path: "/base/category/list"
     });
   },
-  'GET /api/404': (req: Request, res: Response) => {
+  "GET /api/404": (req: Request, res: Response) => {
     res.status(404).send({
       timestamp: 1513932643431,
       status: 404,
-      error: 'Not Found',
-      message: 'No message available',
-      path: '/base/category/list/2121212',
+      error: "Not Found",
+      message: "No message available",
+      path: "/base/category/list/2121212"
     });
   },
-  'GET /api/403': (req: Request, res: Response) => {
+  "GET /api/403": (req: Request, res: Response) => {
     res.status(403).send({
       timestamp: 1513932555104,
       status: 403,
-      error: 'Unauthorized',
-      message: 'Unauthorized',
-      path: '/base/category/list',
+      error: "Unauthorized",
+      message: "Unauthorized",
+      path: "/base/category/list"
     });
   },
-  'GET /api/401': (req: Request, res: Response) => {
+  "GET /api/401": (req: Request, res: Response) => {
     res.status(401).send({
       timestamp: 1513932555104,
       status: 401,
-      error: 'Unauthorized',
-      message: 'Unauthorized',
-      path: '/base/category/list',
+      error: "Unauthorized",
+      message: "Unauthorized",
+      path: "/base/category/list"
     });
-  },
+  }
 };

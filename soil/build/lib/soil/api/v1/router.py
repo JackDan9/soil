@@ -60,7 +60,6 @@ ROUTE_LIST = (
     }),
     ('/osp/networks', {
         'POST': [networks_controller, 'create'],
-
     })
 )
 
