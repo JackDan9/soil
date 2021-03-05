@@ -20,4 +20,5 @@ soil/.venv
 
 #UMI Files
 .umi
-*/.umi
+/.umi
+/soil-dashboard-ts/src/pages/.umi

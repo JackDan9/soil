@@ -25,3 +25,13 @@ class vCenterController(wsgi.Controller):
     
     def show(self, req, vcenter_id):
         return self._vcenter_get_by_uuid(req, vcenter_id)
+    
+    def _vcenter_get(self, req):
+        vcenters = db_api.vcenter_get_all()
+        result = self._view_builder._list(req, vcenters)
+        return result
+    
+    def _vcenter_get_by_uuid(self, req, uuid):
+        vcenter = db_api.vcenter_get_by_uuid(uuid)
+        result = self._view_builder._detail(req, vcenter)
+        return result

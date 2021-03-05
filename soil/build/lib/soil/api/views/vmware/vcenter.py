@@ -18,7 +18,7 @@ class ViewBuilder(object):
         if vcenter is None:
             return {"vcenter": {}}
         # summary = self._summary(vcenter)
-        vcenter_ref = { 
+        vcenter_ref = {
             "vcenter": {
                 'id': vcenter.get('id'),
                 'uuid': vcenter.get('uuid'),
