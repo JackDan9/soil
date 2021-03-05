@@ -8,6 +8,6 @@ class Floatingip(SourceBase):
 
     def __init__(self, plugin, source_id):
         super(Floatingip, self).__init__(plugin, source_id)
-    
+
     def delete(self):
         self.plugin.neutron.delete_floatingip(self.source_id)

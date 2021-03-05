@@ -11,16 +11,16 @@ class InstancesController(wsgi.Controller):
 
     def __init__(self):
         super(InstancesController, self).__init__()
-    
+
     def index(self, req):
         return self._get_allow_instance_numbers(req)
-    
+
     def create(self, req, body):
         return self._get_instances_on_openstack(req, body)
-    
+
     # backend resources operation
     def _get_allow_instance_numbers(self, req):
         return self._view_builder._allow_instance_numbers(req)
-    
+
     def _get_instances_on_openstack(self, req, body):
         return self._view_builder._instance_list(req, body)

@@ -26,27 +26,28 @@ _ENRICHED = False
 
 # NOTE(jackdan): We cannot simply to:
 # conf.register_opts(oslo_db_options.database_opts, 'api_database')
-# If we reuse a db config option option for two different groups ("api_database" 
-# and "database") and depreate or rename a config option in one of these 
+# If we reuse a db config option option for two different groups ("api_database"
+# and "database") and depreate or rename a config option in one of these
 # groups, "oslo.config" cannot correctly determine which one to update.
 # That's why we copied & pasted these config options for the "api_database"
 # group here.
 api_db_group = cfg.OptGroup('api_database',
-    title='API Database Options',
-    help="""
+                            title='API Database Options',
+                            help="""
         The *Soil API Database* is a separate database which is used for information
         which is used across *cells*.
     """
-)
+                            )
 
 api_db_opts = [
     # TODO(jackdan): This should probably have a required=True attribute
     cfg.StrOpt('connection',
-        secret=True,
-        # This help gets appended to the oslo.db help so prefix with a space.
-        help=''
-    )
+               secret=True,
+               # This help gets appended to the oslo.db help so prefix with a space.
+               help=''
+               )
 ]
+
 
 def enrich_help_text(alt_db_opts):
 
@@ -63,9 +64,11 @@ def enrich_help_text(alt_db_opts):
                 # texts here if needed.
                 alt_db_opt.help = db_opt.help + alt_db_opt.help
 
+
 def register_opts(conf):
     oslo_db_options.set_defaults(conf, connection=_DEFAULT_SQL_CONNECTION)
     conf.register_opts(api_db_opts, group=api_db_group)
+
 
 def list_opts():
     # NOTE(jackdan): 2020-04-04: If we list the oslo_db_options here, they

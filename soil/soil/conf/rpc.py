@@ -18,8 +18,8 @@ from oslo_config import cfg
 
 rpc_opts = [
     cfg.IntOpt("long_rpc_timeout",
-        default=1800,
-        help="""
+               default=1800,
+               help="""
 This option allows setting an alternate timeout value for RPC calls
 that have the potential to take a long time. If set, RPC calls to
 other services will use this value for the timeout (in seconds)

@@ -22,7 +22,7 @@ def build_full_traversal():
 
     rpToRp = TraversalSpec(name='rpToRp', type=vim.ResourcePool,
                            path="resourcePool", skip=False)
-    
+
     rpToRp.selectSet.extend
     (
         (
@@ -33,8 +33,7 @@ def build_full_traversal():
 
     rpToVm = TraversalSpec(name='rpToVm', type=vim.ResourcePool,
                            path="vm", skip=False)
-    
-    
+
     # Traversal through resourcepool branch
     crToRp = TraversalSpec(name='crToRp', type=vim.ComputeResource,
                            path='resourcePool', skip=False)
@@ -89,7 +88,7 @@ def build_full_traversal():
             SelectionSpec(name='visitFolders'),
         )
     )
-    
+
     # Resource through all hosts
     hToVm = TraversalSpec(name='hToVm', type=vim.HostSystem,
                           path='vm', skip=False)
@@ -119,7 +118,7 @@ def build_full_traversal():
     )
 
     fullTraversal = SelectionSpec.Array(
-        (visitFolders, dcToHf, dcToVmf, dcToNet, crToH, crToRp, dcToDs, rpToRp, 
+        (visitFolders, dcToHf, dcToVmf, dcToNet, crToH, crToRp, dcToDs, rpToRp,
          hToVm, rpToVm)
     )
 

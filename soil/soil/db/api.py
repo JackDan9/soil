@@ -1,3 +1,4 @@
+# Copyright 2020 Soil, Inc.
 # Copyright (c) 2011 X.commerce, a business unit of eBay Inc.
 # Copyright 2010 United States Government as represented by the
 # Administrator of the National Aeronautics and Space Administration.
@@ -54,8 +55,7 @@ CONF = soil.conf.CONF
 LOG = logging.getLogger(__name__)
 
 
-options.set_defaults(CONF,
-                     connection='mysql+pymysql://root:secret@localhost/soil')
+options.set_defaults(CONF, connection='mysql+pymysql://root:secret@localhost/soil')
 
 
 _LOCK = threading.Lock()

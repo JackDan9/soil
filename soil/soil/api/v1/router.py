@@ -1,3 +1,4 @@
+# Copyright 2020 Soil, Inc.
 # Copyright 2011 OpenStack Foundation
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -35,17 +36,17 @@ def _create_controller(main_controller, action_controller_list):
     return controller
 
 
-version_controller = functools.partial(_create_controller, 
-    versions.VersionsController, [])
+version_controller = functools.partial(_create_controller,
+                                       versions.VersionsController, [])
 
 instances_controller = functools.partial(_create_controller,
-    instances.InstancesController, [])
+                                         instances.InstancesController, [])
 
-networks_controller = functools.partial(_create_controller, 
-   networks.NetworksController,  [])
+networks_controller = functools.partial(_create_controller,
+                                        networks.NetworksController,  [])
 
 vcenter_controller = functools.partial(_create_controller,
-    vcenter.vCenterController, [])
+                                       vcenter.vCenterController, [])
 
 
 ROUTE_LIST = (
@@ -77,7 +78,7 @@ class APIRouter(server.APIRouter):
             if isinstance(methods, six.string_types):
                 mapper.redirect(path, methods)
                 continue
-            
+
             for method, controller_info in methods.items():
                 controller = controller_info[0]()
                 action = controller_info[1]

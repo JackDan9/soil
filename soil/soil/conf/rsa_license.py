@@ -10,7 +10,7 @@ rsa_license_group = cfg.OptGroup(
 
 
 RSA_LICENSE_ALL_OPTS = [
-    cfg.StrOpt('private_key_file', 
+    cfg.StrOpt('private_key_file',
                default='/etc/soil/soil_private.pem'),
     cfg.StrOpt('public_key_file',
                default='/etc/soil/soil_public.pem'),
@@ -23,4 +23,4 @@ def register_opts(conf):
 
 
 def list_opts():
-    return { rsa_license_group: RSA_LICENSE_ALL_OPTS }
+    return {rsa_license_group: RSA_LICENSE_ALL_OPTS}

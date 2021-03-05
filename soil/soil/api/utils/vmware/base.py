@@ -27,6 +27,7 @@ class VMwareCloud(HybridCloud):
 
     Initialize a connection to a vcenter or vsphere.
     """
+
     def __init__(self, *args, **kwargs):
         self.args = args
         self.kwargs = kwargs
@@ -171,7 +172,8 @@ class vCenterBase(VMwareCloud):
 
         pc = self.si.content.propertyCollector
         filterSpec = self.create_filter_spec(objs, props)
-        options = vmodl.query.PropertyCollector.RetrieveOptions(maxObjects=maxObjects)
+        options = vmodl.query.PropertyCollector.RetrieveOptions(
+            maxObjects=maxObjects)
         result = pc.RetrievePropertiesEx([filterSpec], options)
 
         # because the maximum number of objects retrieved by RetrievePropertiesEx and
@@ -208,7 +210,8 @@ class vCenterBase(VMwareCloud):
         obj = None
         if self.si is None:
             return
-        container = content.viewManager.CreateContainerView(content.rootFolder, vimtype, True)
+        container = content.viewManager.CreateContainerView(
+            content.rootFolder, vimtype, True)
         for c in container.view:
             if c.name == name:
                 obj = c
@@ -216,8 +219,7 @@ class vCenterBase(VMwareCloud):
         return obj
 
     def wait_for_task(self, task, actionName='job', hideResult=False):
-        """
-        Waits and provides updates on a vSphere task
+        """Waits and provides updates on a vSphere task
         :param task:
         :param actionName:
         :param hideResult:
@@ -230,14 +232,16 @@ class vCenterBase(VMwareCloud):
 
         if task.info.state == vim.TaskInfo.State.success:
             if task.info.result is not None and not hideResult:
-                out = '%s completed successfully, result: %s' % (actionName, task.info.result)
+                out = '%s completed successfully, result: %s' % (
+                    actionName, task.info.result)
                 print(out)
             else:
                 out = '%s completed successfully.' % actionName
                 print(out)
 
         else:
-            out = '%s did not complete successfully: %s' % (actionName, task.info.error)
+            out = '%s did not complete successfully: %s' % (
+                actionName, task.info.error)
             print(out)
 
         return task.info.result
@@ -255,6 +259,7 @@ class vCenterSmartConnect(vCenterBase):
             si = vCenter.si
             ...
     """
+
     def __enter__(self):
         self.connect()
         return self
@@ -268,6 +273,7 @@ class vCenterPropertyCollector(vCenterBase):
 
     using Managed-object 'ProertyCollector' to retrieve properties
     """
+
     def __init__(self, vcenter, object_type, properties):
         super(vCenterPropertyCollector, self).__init__(vcenter)
         self._object_type = object_type

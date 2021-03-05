@@ -1,3 +1,4 @@
+# Copyright 2020 Soil, Inc.
 # Copyright (c) 2011 X.commerce, a business unit of eBay Inc.
 # Copyright 2010 United States Government as represented by the
 # Administrator of the National Aeronautics and Space Administration.
@@ -45,9 +46,10 @@ BASE = declarative_base()
 def MediumText():
     return Text().with_variant(MEDIUMTEXT(), 'mysql')
 
+
 class SoilBase(models.TimestampMixin,
                models.ModelBase):
-    
+
     metadata = None
 
     def __copy__(self):
@@ -78,8 +80,5 @@ class SoilBase(models.TimestampMixin,
         copy = session.merge(self, load=False)
         session.expunge(copy)
         return copy
-    
+
 # class License(BASE, SoilBase, models.SoftDeleteMixin):
-
-
-

@@ -6,5 +6,3 @@ import webob.exc
 
 from soil.wsgi import common as base_wsgi
 from soil.authenticate.token import verify_token
-
-

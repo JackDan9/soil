@@ -15,6 +15,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+
 def pipeline_factory(loader, global_conf, **local_conf):
     pipeline = local_conf['filter']
     pipeline = pipeline.split()

@@ -1,4 +1,4 @@
-# Copyright 2020 Soil, Inc. 
+# Copyright 2020 Soil, Inc.
 
 import webob.exc
 

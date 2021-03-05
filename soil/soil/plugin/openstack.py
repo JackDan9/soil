@@ -1,9 +1,9 @@
 # Copyright 2020 Soil, Inc.
 
-import time
 import calendar
-import urllib.parse
 from datetime import datetime
+import time
+import urllib.parse
 
 from oslo_log import log as logging
 
@@ -74,10 +74,10 @@ class OpenstackPlugin(object):
         if time.time() > self._openstack_user_token_expire:
             self.auth()
         return self._openstack_user_token
-    
+
     def auth(self):
         auth_url = self.auth_url + '/v2.0/tokens'
-        
+
         data = {
             "auth": {
                 "passwordCredentials": {
@@ -90,9 +90,10 @@ class OpenstackPlugin(object):
         try:
             resp_data = post_request(url=auth_url, body=data)
         except Exception as e:
-            LOG.exception(_LW("Soil openstack authentication PasswordCredentials exception ERROR_CLUSTER : [%(cluster_name)s], ERROR_CONTENT : %(message)s"), 
-                              {"cluster_name": self.cluster_name, "message": e})
-            raise HttpException(code=401, message="Cluster [%s] auth error : %s" % (self.cluster_name, str(e)))
+            LOG.exception(_LW("Soil openstack authentication PasswordCredentials exception ERROR_CLUSTER : [%(cluster_name)s], ERROR_CONTENT : %(message)s"),
+                          {"cluster_name": self.cluster_name, "message": e})
+            raise HttpException(code=401, message="Cluster [%s] auth error : %s" % (
+                self.cluster_name, str(e)))
 
         openstack_user_token = resp_data['access']['token']['id']
         data = {
@@ -107,26 +108,30 @@ class OpenstackPlugin(object):
         try:
             resp_data = post_request(url=auth_url, body=data)
         except Exception as e:
-            LOG.exception(_LW("Soil openstack authentication TenantId exception ERROR_CLUSTER : [%(cluster_name)s], ERROR_CONTENT : %(message)s"), 
+            LOG.exception(_LW("Soil openstack authentication TenantId exception ERROR_CLUSTER : [%(cluster_name)s], ERROR_CONTENT : %(message)s"),
                           {"cluster_name": self.cluster_name, "message": str(e)})
-            raise HttpException(code=401, message="Cluster [%s] auth error : %s" % (self.cluster_name, str(e)))
-        
+            raise HttpException(code=401, message="Cluster [%s] auth error : %s" % (
+                self.cluster_name, str(e)))
+
         self._openstack_user_token = resp_data['access']['token']['id']
 
-        token_expire_timestamp = calendar.timegm(datetime.strptime(transfer_datetime(resp_data['access']['token']['expires']),  "%Y-%m-%d %H:%M:%S").timetuple())
-        LOG.info(_LI("Soil openstack user token expire timestamp is %(timestamp)s"), {"timestamp": token_expire_timestamp})
-        
+        token_expire_timestamp = calendar.timegm(datetime.strptime(transfer_datetime(
+            resp_data['access']['token']['expires']),  "%Y-%m-%d %H:%M:%S").timetuple())
+        LOG.info(_LI("Soil openstack user token expire timestamp is %(timestamp)s"), {
+                 "timestamp": token_expire_timestamp})
+
         self._openstack_user_token_expire = token_expire_timestamp - 300
         self.service_catalog = resp_data
-    
+
     def get_service_url(self, service_name):
         for service in self.service_catalog['access']['serviceCatalog']:
             if service_name == service['name']:
                 return service['endpoints'][0]['publicURL']
-        
-        LOG.exception(_LE("Soil endpoint exception service name : %(service_name)s"), 
-                          {"service_name": service_name})
-        raise HttpException(code=400, message="%s endpoint not found" % service_name)
+
+        LOG.exception(_LE("Soil endpoint exception service name : %(service_name)s"),
+                      {"service_name": service_name})
+        raise HttpException(
+            code=400, message="%s endpoint not found" % service_name)
 
     def init_services(self):
         nova_url = self.get_service_url('nova')
@@ -137,7 +142,7 @@ class OpenstackPlugin(object):
             glance_url = glance_host
         else:
             glance_url = self.get_service_url('Image Service')
-        
+
         self.nova = nova.NovaPlugin(nova_url, self)
         self.cinder = cinder.CinderPlugin(cinder_url, self)
         self.neutron = neutron.NeutronPlugin(neutron_url, self)

@@ -16,16 +16,16 @@ def transfer_datetime(utc_datetime):
 
     from_datetime_zone = tz.gettz('UTC')
     to_datetime_zone = tz.gettz('CST')
- 
-    utc_datetime = datetime.strptime(utc_datetime,"%Y-%m-%dT%H:%M:%SZ")
-    
+
+    utc_datetime = datetime.strptime(utc_datetime, "%Y-%m-%dT%H:%M:%SZ")
+
     utc = utc_datetime.replace(tzinfo=from_datetime_zone)
 
     cst_datetime_zone = utc.astimezone(to_datetime_zone)
 
     cst_datetime = datetime.strftime(cst_datetime_zone, "%Y-%m-%d %H:%M:%S")
 
-    LOG.info(_LI("Localtime %(utc_datetime)s to update destination time %(cst_datetime)s"), 
+    LOG.info(_LI("Localtime %(utc_datetime)s to update destination time %(cst_datetime)s"),
              {"utc_datetime": utc_datetime, "cst_datetime": cst_datetime})
 
     return cst_datetime

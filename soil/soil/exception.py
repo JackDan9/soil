@@ -1,3 +1,4 @@
+# Copyright 2020 Soil, Inc.
 # Copyright 2010 United States Government as represented by the
 # Administrator of the National Aeronautics and Space Administration.
 # All Rights Reserved.
@@ -86,7 +87,8 @@ class RequestException(Exception):
 
     def __init__(self, code, message):
         self.code = code
-        super(Exception, self).__init__(json.dumps({'code': code, 'message': message}))
+        super(Exception, self).__init__(
+            json.dumps({'code': code, 'message': message}))
 
 
 class SoilException(Exception):
@@ -155,7 +157,8 @@ class HttpException(Exception):
 
     def __init__(self, code, message=None):
         self.code = code
-        super(HttpException, self).__init__(json.dumps({'code': code, 'message': message}))
+        super(HttpException, self).__init__(
+            json.dumps({'code': code, 'message': message}))
 
 
 class TimeoutHttpException(HttpException):
@@ -165,10 +168,10 @@ class TimeoutHttpException(HttpException):
         if not code:
             # code is 408 means Request Timeout
             code = 408
-        
+
         if not message:
             message = _LW("Wait Time Out")
-        super(TimeoutHttpException, self).__init__(code=code, message=message) 
+        super(TimeoutHttpException, self).__init__(code=code, message=message)
 
 
 class Invalid(SoilException):

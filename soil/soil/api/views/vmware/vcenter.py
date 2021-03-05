@@ -18,7 +18,7 @@ class ViewBuilder(object):
         if vcenter is None:
             return {"vcenter": {}}
         # summary = self._summary(vcenter)
-        vcenter_ref = { 
+        vcenter_ref = {
             "vcenter": {
                 'id': vcenter.get('id'),
                 'uuid': vcenter.get('uuid'),
@@ -86,7 +86,8 @@ class ViewBuilder(object):
             for key, value in result.items():
                 if isinstance(key, str):
                     about = value.about
-                    summary_ref['version'] = ' '.join([about.apiVersion, about.build])
+                    summary_ref['version'] = ' '.join(
+                        [about.apiVersion, about.build])
                     continue
 
                 if isinstance(key, vim.ComputeResource):
@@ -110,7 +111,8 @@ class ViewBuilder(object):
                     else:
                         summary_ref['numVms'] += 1
 
-                    ip_address = [net.ipAddress for net in guest.net if hasattr(net, 'ipAddress')]
+                    ip_address = [
+                        net.ipAddress for net in guest.net if hasattr(net, 'ipAddress')]
                     for ip in ip_address:
                         if vcenter.host in ip:
                             summary_ref['hostname'] = guest.hostName
@@ -127,7 +129,8 @@ class ViewBuilder(object):
                     summary_ref['dataStore'] += capacity
 
         summary_ref['totalMemory'] = sizeof_fmt(summary_ref['totalMemory'])
-        summary_ref['effectiveMemory'] = sizeof_fmt(summary_ref['effectiveMemory'])
+        summary_ref['effectiveMemory'] = sizeof_fmt(
+            summary_ref['effectiveMemory'])
         summary_ref['dataStore'] = sizeof_fmt(summary_ref['dataStore'])
 
         return summary_ref

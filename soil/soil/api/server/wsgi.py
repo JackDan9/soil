@@ -297,7 +297,8 @@ class ResponseObject(object):
             response.headers[hdr] = value
         response.headers['Content-Type'] = content_type
         if self.obj is not None:
-            response.body = serializer.serialize(self.obj).encode(encoding="utf-8")
+            response.body = serializer.serialize(
+                self.obj).encode(encoding="utf-8")
 
         return response
 
@@ -646,7 +647,7 @@ class Resource(wsgi.Application):
                                                         request, action_args)
 
             if resp_obj and not response:
-                response = resp_obj.serialize(request, accept, 
+                response = resp_obj.serialize(request, accept,
                                               self.default_serializers)
 
         try:
@@ -670,7 +671,7 @@ class Resource(wsgi.Application):
             else:
                 meth = getattr(self.controller, action)
         except AttributeError:
-            if (not self.wsgi_actions or 
+            if (not self.wsgi_actions or
                     action not in ['action', 'create', 'delete']):
                 # Propagate the error
                 raise

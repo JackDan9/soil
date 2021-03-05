@@ -15,4 +15,3 @@
 #    under the License.
 
 from oslo_config import cfg
-

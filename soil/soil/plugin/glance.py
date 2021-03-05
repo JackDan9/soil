@@ -1,9 +1,9 @@
 # Copyright 2020 Hamal, Inc.
 
-from urllib.parse import urlparse
-
-from requests import HTTPError
 import requests
+from requests import HTTPError
+
+from urllib.parse import urlparse
 
 
 class GlancePlugin(object):
@@ -15,7 +15,7 @@ class GlancePlugin(object):
         host_urlparse = urlparse(host_url)
         self.hostname = host_urlparse.hostname
         self.port = host_urlparse.port
-    
+
     @property
     def openstack_user_token(self):
         return self.openstack.token

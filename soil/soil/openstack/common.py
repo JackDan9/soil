@@ -19,7 +19,7 @@ class Wait(object):
         self.func = func
         self.args = args
         self.kwargs = kwargs
-    
+
     def wait(self, interval=5, exc=TimeoutHttpException(), max_time=300, func_exc_max_times=3):
         start_time = time.time()
         func_exc_times = 0
@@ -30,20 +30,20 @@ class Wait(object):
                     db_api.db_session()
                     return True
             except Exception as ex:
-                LOG.exception(_LE('Soil Exception %(ex)s'), 
+                LOG.exception(_LE('Soil Exception %(ex)s'),
                               {'ex': ex})
-                
+
                 if func_exc_times >= func_exc_max_times:
                     raise ex
-                
+
                 func_exc_times = func_exc_times + 1
-            
+
             if time.time() - start_time > max_time:
                 db_api.dispose_engine()
-                
-                LOG.exception(_LE('Soil exc exception %(exc)s'), 
+
+                LOG.exception(_LE('Soil exc exception %(exc)s'),
                               {"exc": exc})
-                
+
                 raise exc
-            
+
             time.sleep(5)

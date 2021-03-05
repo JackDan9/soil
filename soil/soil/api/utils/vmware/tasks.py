@@ -1,3 +1,5 @@
+# Copyright 2020 Soil, Inc.
+
 """
 Written by Michael Rice <michael@michaelrice.org>
 Github: https://github.com/michaelrice

@@ -22,7 +22,7 @@ def verify_license_signature(func):
     return wrapper
 
 
-# check_provider_nums 
+# check_provider_nums
 def check_provider_nums(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):

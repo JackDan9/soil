@@ -1,3 +1,4 @@
+# Copyright 2020 Soil, Inc.
 # Copyright 2010 United States Government as represented by the
 # Administrator of the National Aeronautics and Space Administration.
 # All Rights Reserved.
@@ -32,10 +33,10 @@ def parse_args(argv, default_config_files=None, configure_db=True, init_rpc=True
          project='soil',
          version=version.version_string(),
          default_config_files=default_config_files)
-    
+
     if init_rpc:
         rpc.init(CONF)
-    
+
     if configure_db:
         pass
         # sqlalchemy_api.configure(CONF)

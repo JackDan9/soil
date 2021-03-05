@@ -1,3 +1,4 @@
+# Copyright 2020 Soil, Inc.
 # Copyright 2019 Open Source Community, Inc.
 
 import copy

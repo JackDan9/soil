@@ -40,14 +40,14 @@ class NeutronPlugin(object):
     @property
     def openstack_user_token(self):
         return self.openstack.openstack_user_token
-    
+
     def get_network(self, network_id):
         network_url = self._network_url.format(network_id=network_id)
         return get_request(network_url, self.openstack_user_token)
-    
+
     def get_networks(self):
         return get_request(self._networks_url, self.openstack_user_token)
-    
+
     def create_floatingip(self, net_id, ip, port_id):
         data = {
             "floatingip": {
@@ -58,9 +58,10 @@ class NeutronPlugin(object):
         }
 
         return post_request(self._floating_ips_url, data, self.openstack_user_token)
-    
+
     def delete_floatingip(self, floatingip_id):
-        floatingip_url = self._floating_ip_url.format(floatingip_id=floatingip_id)
+        floatingip_url = self._floating_ip_url.format(
+            floatingip_id=floatingip_id)
         return delete_request(floatingip_url, self.openstack_user_token)
 
     def get_port(self, port_id):
@@ -78,11 +79,13 @@ class NeutronPlugin(object):
         return update_request(port_url, data, self.openstack_user_token)
 
     def get_security_group(self, security_group_id):
-        security_group_url = self._security_group_url.format(security_group_id=security_group_id)
+        security_group_url = self._security_group_url.format(
+            security_group_id=security_group_id)
         return get_request(security_group_url, self.openstack_user_token)
-    
+
     def delete_security_group(self, security_group_id):
-        security_group_url = self._security_group_url.format(security_group_id=security_group_id)
+        security_group_url = self._security_group_url.format(
+            security_group_id=security_group_id)
         return delete_request(security_group_url, self.openstack_user_token)
 
     def create_security_group(self, name):
@@ -95,11 +98,12 @@ class NeutronPlugin(object):
         }
 
         return post_request(self._security_groups_url, data, self.openstack_user_token)
-    
+
     def delete_security_group_rule(self, security_group_rule_id):
-        security_group_rule_url = self._security_group_rule_url.format(security_group_rule_id=security_group_rule_id)
+        security_group_rule_url = self._security_group_rule_url.format(
+            security_group_rule_id=security_group_rule_id)
         return delete_request(security_group_rule_url, self.openstack_user_token)
-    
+
     def create_security_group_rule(self, security_group_id, direction, ethertype, port_range_max,
                                    port_range_min, protocol, remote_group_id, remote_ip_prefix):
         data = {

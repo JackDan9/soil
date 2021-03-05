@@ -1,4 +1,4 @@
-#
+# Copyright 2020 Soil, Inc.
 # Copyright 2013 Red Hat, Inc.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -31,37 +31,37 @@ _NAMESPACE = 'baseapi'
 
 
 class BaseAPI(object):
-  """Client side of the base rpc API.
-  
-  API version history:
+    """Client side of the base rpc API.
 
-      1.0 - Initial Version
-  """
+    API version history:
 
-  VERSION_ALIASES = {
-  }
+        1.0 - Initial Version
+    """
 
-  def __init__(self, topic):
-    super(BaseAPI, self).__init__()
-    target = messaging.Target(topic=topic,
-                              namespace=_NAMESPACE,
-                              version='1.0')
-    self.client = rpc.get_client(target)
+    VERSION_ALIASES = {
+    }
 
-  def ping(self, context, arg, timeout=None):
-    arg_p = jsonutils.to_primitive(arg)
-    cctxt = self.client.prepare(timeout=timeout)
-    return cctxt.call(context, 'ping', arg=arg_p)
+    def __init__(self, topic):
+        super(BaseAPI, self).__init__()
+        target = messaging.Target(topic=topic,
+                                  namespace=_NAMESPACE,
+                                  version='1.0')
+        self.client = rpc.get_client(target)
+
+    def ping(self, context, arg, timeout=None):
+        arg_p = jsonutils.to_primitive(arg)
+        cctxt = self.client.prepare(timeout=timeout)
+        return cctxt.call(context, 'ping', arg=arg_p)
 
 
 class BaseRPCAPI(object):
-  """Server side of the base RPC API."""
+    """Server side of the base RPC API."""
 
-  target = messaging.Target(namespace=_NAMESPACE, version='1.0')
+    target = messaging.Target(namespace=_NAMESPACE, version='1.0')
 
-  def __init__(self, service_name):
-    self.service_name = service_name
+    def __init__(self, service_name):
+        self.service_name = service_name
 
-  def ping(self, context, arg):
-    resp = {'service': self.service_name, 'arg': arg}
-    return jsonutils.to_primitive(resp)
+    def ping(self, context, arg):
+        resp = {'service': self.service_name, 'arg': arg}
+        return jsonutils.to_primitive(resp)

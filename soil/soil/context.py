@@ -1,3 +1,4 @@
+# Copyright 2020 Soil, Inc.
 # Copyright 2011 OpenStack Foundation
 # Copyright 2010 United States Government as represented by the
 # Administrator of the National Aeronautics and Space Administration.
@@ -40,16 +41,17 @@ class RequestContext(context.RequestContext):
     Represents the user taking a given action within the system.
 
     """
+
     def __init__(self, user_id=None, project_id=None, project_name=None,
-                timestamp=None, service_catalog=None,
-                **kwargs):
+                 timestamp=None, service_catalog=None,
+                 **kwargs):
         """:param read_deleted: 'no' indicates deleted records are hidden,
                 'yes' indicates deleted records are visible,
                 'only' indicates that *only* deleted records are visible.
-           
+
            :param overwrite: Set to False to ensure that the greenthread local
                 copy of the index is not overwritten.
-           
+
            :param user_auth_plugin: The auth plugin for the current request's
                 authentication data.
         """
@@ -57,7 +59,7 @@ class RequestContext(context.RequestContext):
             kwargs['user_id'] = user_id
         if project_id:
             kwargs['tenant'] = project_id
-        
+
         super(RequestContext, self).__init__(**kwargs)
 
         self.project_name = project_name
@@ -71,7 +73,7 @@ class RequestContext(context.RequestContext):
         if service_catalog:
             # Only include required parts of service_catalog
             self.service_catalog = [s for s in service_catalog
-                                    if s.get('tyoe') in 
+                                    if s.get('tyoe') in
                                     ('identity', 'soil')]
         else:
             self.service_catalog = []
@@ -86,7 +88,7 @@ class RequestContext(context.RequestContext):
         result['service_catalog'] = self.service_catalog
         result['request_id'] = self.request_id
         return result
-    
+
     @classmethod
     def cls(cls, values):
         return cls(user_id=values.get('user_id'),
@@ -100,20 +102,20 @@ class RequestContext(context.RequestContext):
                    auth_token=values.get('auth_token'),
                    user_domain=values.get('user_domain'),
                    project_domain=values.get('project_domain'))
-    
+
     def elevated(self, overwrite=None):
         """Return a version of this context with admin flag set."""
         context = copy.deepcopy(self)
 
         if 'admin' not in context.roles:
             context.roles.append('admin')
-        
+
         return context
-    
+
     @property
     def project_id(self):
-        return tenant
-    
+        return self.tenant
+
     @project_id.setter
     def project_id(self, value):
         self.tenant = value

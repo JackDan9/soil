@@ -68,7 +68,8 @@ Destination cluster glance host
 
 def register_opts(conf):
     conf.register_group(destination_cluster_group)
-    conf.register_opts(DESTINATION_CLUSTER_ALL_OPTS, group=destination_cluster_group)
+    conf.register_opts(DESTINATION_CLUSTER_ALL_OPTS,
+                       group=destination_cluster_group)
 
 
 def list_opts(conf):

@@ -14,9 +14,9 @@ class DataBase(object):
         try:
             return self.data[name]
         except KeyError:
-            LOG.error(_LW("'%(classname)s' object has no attribute '%(name)s'"), 
-                          {"classname": self.__class__.__name__, "name": name})
-            raise AttributeError("'%(classname)s' object has no attribute '%(name)s'", 
+            LOG.error(_LW("'%(classname)s' object has no attribute '%(name)s'"),
+                      {"classname": self.__class__.__name__, "name": name})
+            raise AttributeError("'%(classname)s' object has no attribute '%(name)s'",
                                  {"classname": self.__class__.__name__, "name": name})
 
 
@@ -26,21 +26,21 @@ class SourceBase(object):
     def __init__(self, plugin, source_id):
         self.plugin = plugin
         self.source_id = source_id
-    
+
     @classmethod
     def get_type(cls):
         return cls.__name__.lower()
-    
+
     def get_source_id(self):
         return self.source_id
-    
+
     def delete(self):
         pass
-    
+
     def _check_failed_status(self, status):
         if status.upper() in ('ERROR', ):
-            LOG.error(_LW("%(type)s %(source_id)s is ERROR"), 
-                          {"type": self.get_type(), "source_id": self.source_id})
+            LOG.error(_LW("%(type)s %(source_id)s is ERROR"),
+                      {"type": self.get_type(), "source_id": self.source_id})
 
-            raise Exception("%(type)s %(source_id)s is ERROR", 
+            raise Exception("%(type)s %(source_id)s is ERROR",
                             {"type": self.get_type(), "source_id": self.source_id})

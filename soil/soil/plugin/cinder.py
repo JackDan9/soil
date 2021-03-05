@@ -28,11 +28,11 @@ class CinderPlugin(object):
         self._volumes_detail_url = self.host_url + VOLUMES_DETAIL_URL
         self._volume_action_url = self.host_url + VOLUME_ACTION_URL
         self._types_url = self.host_url + TYPES_URL
-    
+
     @property
     def openstack_user_token(self):
         return self.openstack.openstack_user_token
-    
+
     def show_volumes(self):
         volumes_url = self._volumes_url
         return get_request(url=volumes_url, token=self.openstack_user_token)
@@ -40,7 +40,7 @@ class CinderPlugin(object):
     def show_volume(self, volume_id):
         volume_url = self._volumes_url.format(volume_id=volume_id)
         return get_request(url=volume_url, token=self.openstack_user_token)
-    
+
     def create_volume(self, size, display_name=None, display_description=None, image_id=None, volume_type=None):
         data = {
             "volume": {
@@ -61,11 +61,11 @@ class CinderPlugin(object):
         }
 
         return post_request(self._volumes_url, data, self.openstack_user_token)
-    
+
     def delete_volume(self, volume_id):
         volume_url = self._volumes_url.format(volume_id=volume_id)
         return delete_request(volume_url, self.openstack_user_token)
-    
+
     def show_snapshots(self):
         snapshots_url = self._snapshots_url
         return get_request(snapshots_url, self.openstack_user_token)
@@ -73,7 +73,7 @@ class CinderPlugin(object):
     def show_snapshot(self, snapshot_id):
         snapshot_url = self._snapshot_url.format(snapshot_id=snapshot_id)
         return get_request(snapshot_url, self.openstack_user_token)
-    
+
     def create_snapshot_from_volume(self, volume_id):
         data = {
             "snapshot": {
@@ -85,11 +85,11 @@ class CinderPlugin(object):
         }
 
         return post_request(self._snapshot_url, data, self.openstack_user_token)
-    
+
     def delete_snapshot(self, snapshot_id):
         snapshot_url = self._snapshot_url.format(snapshot_id=snapshot_id)
         return delete_request(snapshot_url, self.openstack_user_token)
-    
+
     def create_another_env_image(self, volume_id, image_name, glance_ip, glance_port, glance_token, container_format, disk_format):
         data = {
             "os-volume_upload_image": {
@@ -107,7 +107,7 @@ class CinderPlugin(object):
 
         volume_url = self._volume_action_url.format(volume_id=volume_id)
         return post_request(volume_url, data, self.openstack_user_token)
-    
+
     def set_volume_bootable(self, volume_id, bootable):
         data = {
             "os-set_bootable": {
@@ -117,7 +117,7 @@ class CinderPlugin(object):
 
         volume_url = self._volume_action_url.format(volume_id=volume_id)
         return post_request(volume_url, data, self.openstack_user_token, no_resp_content=True)
-    
+
     def set_volume_status(self, volume_id, status):
         data = {
             "os-reset_status": {
@@ -127,6 +127,6 @@ class CinderPlugin(object):
 
         volume_url = self._volume_action_url(volume_id=volume_id)
         return post_request(volume_url, data, self.openstack_user_token, no_resp_content=True)
-    
+
     def show_volume_types(self):
         return get_request(self._types_url, self.openstack_user_token)

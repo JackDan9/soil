@@ -37,7 +37,7 @@ class RSALicense(object):
                 password=password,
                 backend=default_backend()
             )
-        
+
         if not serialize:
             self._private_key = private_key
         else:
@@ -48,14 +48,14 @@ class RSALicense(object):
             )
 
             self._private_key = pem
-    
+
     def loading_public_key(self, serialize=False):
         with open(self.public_key_file, 'rb') as key_file:
             public_key = serialization.load_der_public_key(
                 key_file.read(),
                 backend=default_backend()
             )
-        
+
         if not serialize:
             self._public_key = public_key
         else:
@@ -64,7 +64,7 @@ class RSALicense(object):
                 format=serialization.PublicFormat.SubjectPublicKeyInfo
             )
             self._public_key = pem
-    
+
     def encrypt_message(self, message):
         if self._public_key is None:
             self.loading_public_key()
@@ -78,7 +78,7 @@ class RSALicense(object):
         )
 
         return ciphertext
-    
+
     def decrypt_message(self, message):
         if self._private_key is None:
             self.loading_private_key()
@@ -108,7 +108,7 @@ class RSALicense(object):
         )
         new_license = {'signature': signature, 'message': msg}
         return base64.b64encode(str(new_license))
-    
+
     def verify_license_signature(self, license):
         license = eval(base64.b64decode(license))
         signature = license.get('signature')
@@ -127,7 +127,7 @@ class RSALicense(object):
                     ),
                     hashes.SHA256()
                 )
-            
+
             # if the version of cryptography == 1.3.x
             # we should use verifier function to verify sign
             elif hasattr(self._public_key, 'verify'):

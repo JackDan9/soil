@@ -17,7 +17,7 @@ class ViewBuilder(object):
 
     def __init__(self):
         super(ViewBuilder, self).__init__()
-    
+
     def _instance_list(self, req, body):
         auth_url = body['auth_url']
         username = body['username']
@@ -36,4 +36,4 @@ class ViewBuilder(object):
 
         instances = source_plugin.nova.get_list_instance()['servers']
 
-        return { "instances": instances }
+        return {"instances": instances}

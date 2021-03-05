@@ -17,7 +17,7 @@ class ViewBuilder(object):
 
     def __init__(self):
         super(ViewBuilder, self).__init__()
-    
+
     def _network_list(self, req, body):
         auth_url = body['auth_url']
         username = body['username']
@@ -36,4 +36,4 @@ class ViewBuilder(object):
 
         networks = source_plugin.neutron.get_networks()['networks']
 
-        return { "networks": networks }
+        return {"networks": networks}

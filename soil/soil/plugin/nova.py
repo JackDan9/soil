@@ -25,7 +25,7 @@ IMAGE_URL = '/images/{image_id}'
 
 class InterfacePlugin(object):
     """A plugin of Interface"""
-    
+
     def get_instance(self, instance_id):
         pass
 
@@ -39,20 +39,21 @@ class NovaPlugin(object):
         self._instance_url = self.host_url + INSTANCE_URL
         self._instances_url = self.host_url + INSTANCES_URL
         self._instance_action_url = self.host_url + INSTANCE_ACTION_URL
-        self._instance_volume_attachments_url = self.host_url + INSTANCE_VOLUME_ATTACHMENTS_URL
+        self._instance_volume_attachments_url = self.host_url + \
+            INSTANCE_VOLUME_ATTACHMENTS_URL
         self._instance_interface_url = self.host_url + INSTANCE_INTERFACE_URL
         self._flavors_url = self.host_url + FLAVORS_URL
         self._flavor_url = self.host_url + FLAVOR_URL
         self._volume_boot_url = self.host_url + VOLUME_BOOT_URL
         self._image_url = self.host_url + IMAGE_URL
-    
+
     @property
     def openstack_user_token(self):
         return self.openstack.openstack_user_token
-    
+
     def get_list_instance(self):
         return get_request(self._instances_url, self.openstack_user_token)
-    
+
     def get_instance(self, instance_id):
         instance_url = self._instance_url.format(instance_id=instance_id)
         return get_request(instance_url, self.openstack_user_token)
@@ -62,32 +63,34 @@ class NovaPlugin(object):
         return delete_request(instance_url, self.openstack_user_token)
 
     def stop_instance(self, instance_id):
-        instance_url = self._instance_action_url.format(instance_id=instance_id)
+        instance_url = self._instance_action_url.format(
+            instance_id=instance_id)
         data = {
             "os-stop": None
         }
-        
+
         try:
             return post_request(instance_url, body=data, token=self.openstack_user_token, no_resp_content=True)
         except SoilException as se:
-            LOG.exception(_LE("Stop instance exception is : %(se)s", 
-                          {"se": se}))
+            LOG.exception(_LE("Stop instance exception is : %(se)s",
+                              {"se": se}))
             if se.code != 409:
                 raise se
-    
+
     def start_instance(self, instance_id):
-        instance_url = self._instance_action_url.format(instance_id=instance_id)
+        instance_url = self._instance_action_url.format(
+            instance_id=instance_id)
         data = {
             "os-start": None
         }
         try:
             return post_request(instance_url, body=data, token=self.openstack_user_token, no_resp_content=True)
         except SoilException as se:
-            LOG.exception(_LE("Start instance exception is : %(se)s", 
+            LOG.exception(_LE("Start instance exception is : %(se)s",
                               {"se": se}))
             if se.code != 409:
                 raise se
-        
+
     def volumes_boot(self, name, flavor_id, source_type, source_id, volume_size, net_ids):
         volume_boot_url = self._volume_boot_url
 
@@ -113,12 +116,14 @@ class NovaPlugin(object):
             }
         }
 
-        resp_data = post_request(volume_boot_url, data, self.openstack_user_token)
+        resp_data = post_request(
+            volume_boot_url, data, self.openstack_user_token)
         return resp_data
-    
+
     def volume_attach_instance(self, instance_id, volume_id):
-        instance_volume_attachment_url = self._instance_volume_attachments_url.format(instance_id=instance_id)
-        
+        instance_volume_attachment_url = self._instance_volume_attachments_url.format(
+            instance_id=instance_id)
+
         data = {
             "volumeAttachment": {
                 "device": None,
@@ -150,9 +155,10 @@ class NovaPlugin(object):
             }
         }
 
-        resp_data = post_request(self._flavors_url, data, self.openstack_user_token)
+        resp_data = post_request(
+            self._flavors_url, data, self.openstack_user_token)
         return resp_data
-    
+
     def delete_flavor(self, flavor_id):
         flavor_url = self._flavor_url.format(flavor_id=flavor_id)
         return delete_request(flavor_url, self.openstack_user_token)
@@ -166,5 +172,6 @@ class NovaPlugin(object):
         return delete_request(image_url, self.openstack_user_token)
 
     def get_instance_interface(self, instance_id):
-        instance_interface_url = self._instance_interface_url.format(instance_id=instance_id)
+        instance_interface_url = self._instance_interface_url.format(
+            instance_id=instance_id)
         return get_request(instance_interface_url, self.openstack_user_token)

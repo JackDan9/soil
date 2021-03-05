@@ -49,5 +49,6 @@ def register_opts(conf):
     conf.register_group(source_cluster_group)
     conf.register_opts(SOURCE_CLUSTER_ALL_OPTS, group=source_cluster_group)
 
+
 def list_opts():
     return {source_cluster_group: SOURCE_CLUSTER_ALL_OPTS}

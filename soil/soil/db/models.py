@@ -93,4 +93,5 @@ class vCenterLog(BASE, SoilDBBase):
     res_op_action = Column(String(64))  # resource operator action
     res_op_at = Column(DateTime, default=timeutils.utcnow,
                        onupdate=timeutils.utcnow)  # resource operate time
-    created_at = Column(DateTime, default=timeutils.utcnow)
+    created_at = Column(DateTime, default=timeutils.utcnow),
+    updated_at = Column(DateTime, default=timeutils.utcnow)
