@@ -1,5 +1,5 @@
 #node_modules
-/soil-dashboard-ts/node_modules
+/soil-dashboard/node_modules
 
 #System Files
 .DS_Store
@@ -10,7 +10,7 @@ soil/.venv
 
 
 #IDE VSCode Files
-/soil-dashboard-ts/.vscode/*
+/soil-dashboard/.vscode/*
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -21,4 +21,4 @@ soil/.venv
 #UMI Files
 .umi
 /.umi
-/soil-dashboard-ts/src/pages/.umi
+/soil-dashboard/src/pages/.umi

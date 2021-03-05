@@ -1,0 +1,55 @@
+@import '~antd/es/style/themes/default.less';
+
+.loginContainer {
+  width: 325px;
+  padding: 10px 0;
+  margin: 0 auto;
+  @media screen and (max-width: @screen-sm) {
+    width: 95%;
+    max-width: 325px;
+  }
+  .loginName {
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    .loginNameZh {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .loginNameEn {
+      font-size: 14px;
+      color: gray;
+    }
+  }
+  .loginForm {
+    max-width: 100%;
+
+    .siteFormItemInput {
+      padding: 8.5px 11px;
+    }
+
+    .siteFormItemIcon {
+      color: gray;
+    }
+    
+    .loginFromForgot {
+      float: right;
+    }
+    
+    .loginFromButton {
+      height: 40px;
+      width: 100%;
+      padding: 6.4px 15px;
+      font-size: 16px;
+      border-radius: 2px;
+    }
+    
+    .topLine {
+      border-top: 1px solid #cccccc;
+      padding-top: 10px;
+    }
+  }
+}
