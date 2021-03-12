@@ -2,11 +2,13 @@ import { Permission } from '@/store/model/permission';
 import CommonRoute from './CommonRoute';
 import accountRoute from './modules/account';
 import dashboardRoute from './modules/dashboard';
-import orderRoute from './modules/order';
-import businessRoute from './modules/business';
-import brandRoute from './modules/brand';
+// import orderRoute from './modules/order';
+// import businessRoute from './modules/business';
+// import brandRoute from './modules/brand';
+import vmwareRoute from './modules/vmware';
+import openstackRoute from './modules/openstack';
 
-const routeMap = [dashboardRoute, accountRoute, orderRoute, businessRoute, brandRoute];
+const routeMap = [dashboardRoute, vmwareRoute, openstackRoute, accountRoute];
 
 // 根据路由名称获取可访问的路由表
 const filterRouteMap = (routeNames: string[], routeMap: CommonRoute[]) => {

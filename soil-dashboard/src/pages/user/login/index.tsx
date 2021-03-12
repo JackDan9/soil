@@ -14,82 +14,12 @@ const Login: React.FC = () => {
   const history = useHistory();
   const onFinish = async (values) => {
     const data = await service.login(values);
-
     const token = data.token;
     request.setHeader({ Authorization: token });
     userStore.setToken(token);
-    
-    const userInfo: UserInfo = {
-      companyid: data.companyid,
-      nickname: data.nickname,
-      openid: data.openid,
-      uid: data.uid,
-      username: data.username,
-      permission: [
-        {
-          id: 1,
-          name: 'dashboard',
-          description: '首页',
-          reminder: '您没有权限访问首页'
-        },
-        {
-          id: 2,
-          name: 'chart'
-        },
-        {
-          id: 3,
-          name: 'article'
-        },
-        {
-          id: 4,
-          name: 'blank'
-        },
-        {
-          id: 5,
-          name: 'form'
-        },
-        {
-          id: 6,
-          name: 'account'
-        },
-        {
-          id: 7,
-          name: 'business'
-        },
-        {
-          id: 8,
-          name: 'brand'
-        }
-      ]
-    }
-
-    if (data['roleid'] > 3) {
-      userInfo.permission = [
-        {
-          id: 1,
-          name: 'dashboard',
-          description: '首页',
-          reminder: '您没有权限访问首页'
-        },
-        {
-          id: 5,
-          name: 'order'
-        },
-        {
-          id: 6,
-          name: 'account'
-        },
-        {
-          id: 7,
-          name: 'business'
-        },
-        {
-          id: 8,
-          name: 'brand'
-        }
-      ]
-    }
-    userStore.setUserInfo(userInfo);
+    const userInfoData = await service.userInfo(token);
+    debugger;
+    userStore.setUserInfo(userInfoData);
     history.replace('/dashboard');
   };
 

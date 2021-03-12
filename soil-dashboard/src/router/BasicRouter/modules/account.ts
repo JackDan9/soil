@@ -19,7 +19,7 @@ const route: CommonRoute = {
   title: '用户管理',
   icon: 'account',
   path: '/account',
-  // component: Account
+  // component: Account 
   children: [
     {
       name: 'center',

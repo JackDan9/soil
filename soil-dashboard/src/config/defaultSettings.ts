@@ -26,8 +26,8 @@ export interface DefaultSettings {
 
 export default {
   logo: logoSvg,
-  chineseName: '拉姆达',
-  englishName: 'Lamuda',
-  title: 'Admin Lamuda',
+  chineseName: '多云管理',
+  englishName: 'Soil',
+  title: 'Admin Soil',
   userLayoutBg: loginBg
 } as DefaultSettings;

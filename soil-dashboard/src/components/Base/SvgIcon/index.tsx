@@ -8,6 +8,8 @@ import Fly from '@/assets/icons/fly.svg';
 import Chart from '@/assets/icons/chart.svg';
 import Business from '@/assets/icons/business.svg';
 import Brand from '@/assets/icons/brand.svg';
+import VMware from '@/assets/icons/vmware.svg';
+import Openstack from '@/assets/icons/openstack.svg';
 
 const ICON_NAME_MAP = {
   dashboard: Dashboard,
@@ -15,7 +17,9 @@ const ICON_NAME_MAP = {
   fly: Fly,
   chart: Chart,
   business: Business,
-  brand: Brand
+  brand: Brand,
+  vmware: VMware,
+  openstack: Openstack,
 }
 
 const iconNames = tupleStr(
@@ -24,7 +28,9 @@ const iconNames = tupleStr(
   'fly',
   'chart',
   'business',
-  'brand'
+  'brand',
+  'vmware',
+  'openstack'
 )
 
 export type IconName = typeof iconNames[number];

@@ -9,6 +9,7 @@ const loginData = Mock.mock({
 const userInfo = Mock.mock({
   name: '@cname',
   username: '@cname',
+  nickname: '@cname',
   gender: '@pick([1, 2])',
   avatar: 'https://avatars1.githubusercontent.com/u/12805846?s=60&v=4',
   email: '@email',
@@ -21,15 +22,15 @@ const userInfo = Mock.mock({
 export default {
   login(config: Config) {
     const user = JSON.parse(config.body)
-    if (user.params.username === 'editor') {
+    if ((user.username === 'admin' && user.password === 'passw0rd') || (user.username === 'admin@example.org' && user.password === 'passw0rd')) {
       loginData.token = 'd02fd62b-cfdf-9efb-adfb-7fc1e85bf99c'
-    } else if (user.params.username === 'guest') {
+    } else if ((user.username === 'guest' && user.password === 'passw0rd') || (user.username === 'guest@example.org' && user.password === 'passw0rd')) {
       loginData.token = 'ecfe1e6b-cba6-dfee-fdba-12015b7f2420'
     } else {
       loginData.token = '6f81bbab-5b7e-abfb-bd44-efd5aeee82cc'
     }
     return {
-      code: 200,
+      code: 0,
       data: loginData
     }
   },
@@ -42,7 +43,6 @@ export default {
   getUserInfo(config: Config) {
     const { token } = getURLParams(config.url)
     if (token === 'd02fd62b-cfdf-9efb-adfb-7fc1e85bf99c') {
-      userInfo.roles = [3]
       userInfo.permission = [
         {
           id: 1,
@@ -52,31 +52,18 @@ export default {
         },
         {
           id: 2,
-          name: 'chart'
+          name: 'vmware'
         },
         {
           id: 3,
-          name: 'article'
+          name: 'openstack'
         },
         {
           id: 4,
-          name: 'blank'
-        },
-        {
-          id: 5,
-          name: 'form'
-        },
-        {
-          id: 6,
           name: 'account'
-        },
-        {
-          id: 7,
-          name: 'business'
         }
       ]
     } else if (token === 'ecfe1e6b-cba6-dfee-fdba-12015b7f2420') {
-      userInfo.roles = [2]
       userInfo.permission = [
         {
           id: 1,
@@ -86,7 +73,6 @@ export default {
         },
       ]
     } else {
-      userInfo.roles = [1]
       userInfo.permission = [
         {
           id: 1,
@@ -96,33 +82,17 @@ export default {
         },
         {
           id: 2,
-          name: 'chart'
+          name: 'vmware'
         },
         {
           id: 3,
-          name: 'article'
-        },
-        {
-          id: 4,
-          name: 'blank'
-        },
-        {
-          id: 5,
-          name: 'form'
-        },
-        {
-          id: 6,
-          name: 'account'
-        },
-        {
-          id: 7,
-          name: 'business'
+          name: 'openstack'
         }
       ]
     }
     return {
       code: 0,
-      result: userInfo
+      data: userInfo
     }
   }
 }
