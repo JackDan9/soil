@@ -18,7 +18,6 @@ const Login: React.FC = () => {
     request.setHeader({ Authorization: token });
     userStore.setToken(token);
     const userInfoData = await service.userInfo(token);
-    debugger;
     userStore.setUserInfo(userInfoData);
     history.replace('/dashboard');
   };
