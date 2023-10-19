@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-19T09:51:45.471Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="pVVz-id8L9GfxEh9wySY" version="22.0.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-19T09:54:08.931Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="J1biqY7yz07nhIj8XRNC" version="22.0.5" type="github">
   <diagram name="第 1 页" id="z0-10-r30Knb3vr5k5f2">
     <mxGraphModel dx="2021" dy="610" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -63,6 +63,9 @@
         </mxCell>
         <mxCell id="LV-CpRHYJoCNj6H-gSDn-25" value="并支持外部网关可以配置url前缀&lt;br&gt;到emissary-ingress服务上&lt;br&gt;emissary-ingress是集群内部的服务" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="-2" y="729" width="205" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-26" value="访问形式变为: http://urlPrefix(url前缀)/k8s-name/&amp;lt;namespace&amp;gt;/mapping-route/算子真实服务地址" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="25" y="862" width="531" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
