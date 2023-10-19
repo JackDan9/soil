@@ -1,9 +1,69 @@
-<mxfile host="app.diagrams.net" modified="2023-10-19T09:35:44.305Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" version="22.0.5" etag="ieAPsq0vvrwQIfnw_I_Q" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-19T09:51:45.471Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="pVVz-id8L9GfxEh9wySY" version="22.0.5" type="github">
   <diagram name="第 1 页" id="z0-10-r30Knb3vr5k5f2">
-    <mxGraphModel>
+    <mxGraphModel dx="2021" dy="610" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-2" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="187" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="439" y="56" width="310" height="347" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-7" value="pas-pods" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="532" y="68" width="151" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-8" value="pas-svc-nodeport&lt;br&gt;(self-learner&lt;br&gt;batch-predictor&lt;br&gt;predictor&lt;br&gt;simple-tensorflow-serving&lt;br&gt;h2o-predictor&lt;br&gt;pmml-predictor&lt;br&gt;cli-serving&lt;br&gt;pytorch-serving&lt;br&gt;paddle-serving&lt;br&gt;asr-serving&lt;br&gt;pmml-serving&lt;br&gt;cus-app&lt;br&gt;notebook-model-serving&lt;br&gt;notebook-model-predictor)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="532" y="139" width="151" height="242" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-10" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=-0.006;entryY=0.478;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="85" y="218.99880699460692" as="sourcePoint" />
+            <mxPoint x="437.1400000000001" y="223.666" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-11" value="nginx直接访问&lt;br&gt;http://hostIP:pasNodePort/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="148" y="182" width="159" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-12" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry y="649.5" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-14" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="477" y="507" width="310" height="347" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-15" value="pas-svc-clusterIP&lt;br&gt;(self-learner&lt;br&gt;batch-predictor&lt;br&gt;predictor&lt;br&gt;simple-tensorflow-serving&lt;br&gt;h2o-predictor&lt;br&gt;pmml-predictor&lt;br&gt;cli-serving&lt;br&gt;pytorch-serving&lt;br&gt;paddle-serving&lt;br&gt;asr-serving&lt;br&gt;pmml-serving&lt;br&gt;cus-app&lt;br&gt;notebook-model-serving&lt;br&gt;notebook-model-predictor)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="574" y="598" width="151" height="242" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-16" value="pas-pods" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="574" y="522" width="151" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-17" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="181" y="574" width="201" height="211" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-18" value="emissary-ingress" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="601" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-19" value="mapping" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="692" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-21" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="LV-CpRHYJoCNj6H-gSDn-14" target="LV-CpRHYJoCNj6H-gSDn-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="507" y="758" as="sourcePoint" />
+            <mxPoint x="447" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-22" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LV-CpRHYJoCNj6H-gSDn-12" target="LV-CpRHYJoCNj6H-gSDn-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="728" as="sourcePoint" />
+            <mxPoint x="160" y="678" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-24" value="通过emissary-ingress访问&lt;br&gt;通过mapping访问具体的算子服务" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="7" y="601" width="196" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="LV-CpRHYJoCNj6H-gSDn-25" value="并支持外部网关可以配置url前缀&lt;br&gt;到emissary-ingress服务上&lt;br&gt;emissary-ingress是集群内部的服务" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-2" y="729" width="205" height="55" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
