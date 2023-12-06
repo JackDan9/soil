@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-06T03:53:41.603Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="nxU4LvboalrmuRoNslEx" version="22.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-06T03:56:52.076Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="jdLHr2joL8aLa_jHPEmp" version="22.1.5" type="github">
   <diagram name="第 1 页" id="RFqubxHH86JAbSpuru27">
     <mxGraphModel dx="1434" dy="786" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -15,11 +15,19 @@
         <mxCell id="AkYm-pmbZ86CwhPPTDKQ-1" value="app-center&lt;br&gt;Studio 应用管理" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="498" y="252" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="AkYm-pmbZ86CwhPPTDKQ-3" value="app-wizard&lt;br&gt;应用模版文件&lt;br&gt;&lt;br&gt;Module Templates&lt;br&gt;&lt;br&gt;GDBT Predictor&lt;br&gt;simple-tensorflow serving&lt;br&gt;......" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="AkYm-pmbZ86CwhPPTDKQ-3" value="app-wizard&lt;br&gt;Studio 应用模版文件&lt;br&gt;&lt;br&gt;Module Templates&lt;br&gt;&lt;br&gt;GDBT Predictor&lt;br&gt;simple-tensorflow serving&lt;br&gt;......" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="227" y="83" width="169" height="123" as="geometry" />
         </mxCell>
-        <mxCell id="AkYm-pmbZ86CwhPPTDKQ-7" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="304" y="458" width="120" height="60" as="geometry" />
+        <mxCell id="AkYm-pmbZ86CwhPPTDKQ-7" value="Telamon&lt;br&gt;&lt;br&gt;Sage Kernel Metadata server" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="239" y="411" width="120" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="AkYm-pmbZ86CwhPPTDKQ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.992;entryY=0.634;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="AkYm-pmbZ86CwhPPTDKQ-1" target="AkYm-pmbZ86CwhPPTDKQ-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AkYm-pmbZ86CwhPPTDKQ-9" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;request model metadata&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="AkYm-pmbZ86CwhPPTDKQ-8">
+          <mxGeometry x="-0.0031" y="1" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
