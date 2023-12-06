@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-06T10:07:19.596Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="s9sAcgQXHgt2AGqlJ8br" version="22.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-06T10:10:18.933Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="W3C4fue7btUeI0PVVuQ1" version="22.1.5" type="github">
   <diagram name="第 1 页" id="RFqubxHH86JAbSpuru27">
     <mxGraphModel dx="1423" dy="786" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -95,7 +95,12 @@
         <mxCell id="AkYm-pmbZ86CwhPPTDKQ-32" value="应用管理&lt;br&gt;&lt;br&gt;查看应用详情、删除应用等" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="505" y="860" width="222" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="AkYm-pmbZ86CwhPPTDKQ-36" value="服务管理&lt;br&gt;&lt;br&gt;选择版本应用，模块配置，授权以及部署服务" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="AkYm-pmbZ86CwhPPTDKQ-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="AkYm-pmbZ86CwhPPTDKQ-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="765" y="1230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AkYm-pmbZ86CwhPPTDKQ-36" value="服务管理&lt;br&gt;&lt;br&gt;选择版本应用，模块配置(instance个数,cpu,mem...)，授权以及部署服务" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="490" y="1009" width="252" height="92" as="geometry" />
         </mxCell>
         <mxCell id="AkYm-pmbZ86CwhPPTDKQ-40" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
@@ -119,6 +124,9 @@
           <mxGeometry x="-0.0189" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="AkYm-pmbZ86CwhPPTDKQ-51" value="实验管理&lt;br&gt;&lt;br&gt;创建实验，配置实验资源(instance个数,cpu,mem...), 配置流量分发策略&lt;div style=&quot;box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-alternates: inherit; font-variant-position: inherit; font-stretch: inherit; line-height: inherit; font-family: &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;Hiragino Sans GB&amp;quot;, &amp;quot;Heiti SC&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, &amp;quot;WenQuanYi Micro Hei&amp;quot;, sans-serif; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; vertical-align: baseline; position: relative; display: inline-block; color: rgb(51, 51, 51); text-align: start; background-color: rgb(255, 255, 255);&quot; class=&quot;index_radio-Style-Parent_sI735&quot;&gt;以及创建实验&lt;div style=&quot;box-sizing: border-box; margin: 0px 36px 0px 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: initial; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; vertical-align: baseline; display: inline-block;&quot; class=&quot;index_radio-style-before_1yXye&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="489" y="1233" width="335" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
