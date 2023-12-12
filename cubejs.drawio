@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-12T08:27:38.532Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="k7k_4-hVsFSb7Ngk76QS" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-12T08:37:45.114Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="uSBQRrDB0utsQKCMIhkR" version="22.1.7" type="github">
   <diagram name="第 1 页" id="1hYo64LuMpDYzzGd4I8e">
     <mxGraphModel dx="1406" dy="640" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -72,13 +72,13 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="4XoDtmQWzFF1k-0LZuOs-7" value="配置语义" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="4XoDtmQWzFF1k-0LZuOs-7" value="配置语义&lt;br&gt;删除&lt;br&gt;同步状态" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="785" y="189" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4XoDtmQWzFF1k-0LZuOs-9" value="选择主题场景(topic)&lt;br&gt;选择数据库(datasource_id)&lt;br&gt;选择表(sql)&lt;br&gt;描述(description)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="415.75" y="73" width="154.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="arsLk9QwE6Tpv6ynl3g6-4" value="语义名称(display_name --- string)&lt;br&gt;语义描述(description --- string)&lt;br&gt;语义类型(term_type --- string measure | dimensions | join)&lt;br&gt;语义别名(alias --- array[string])&lt;br&gt;语义配置(config --- map) {&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;字段操作(sql --- string)&lt;br&gt;主键配置(primary_key --- boolean)&lt;br&gt;格式(format --- string)&lt;br&gt;值实体id(value-entity-id --- number)&lt;br&gt;同步状态(sync_value_status ---- string)&lt;/blockquote&gt;}" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;align=left;" vertex="1" parent="1">
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-4" value="语义名称(display_name --- string)&lt;br&gt;语义描述(description --- string)&lt;br&gt;语义类型(term_type --- string measure | dimensions | join)&lt;br&gt;语义别名(alias --- array[string])&lt;br&gt;语义配置(config --- map) {&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;字段操作(sql --- string)&lt;br&gt;主键配置(primary_key --- boolean)&lt;br&gt;tips:如果是通过这个字段来join得设置为主键&lt;br&gt;格式(format --- string)&lt;br&gt;同步状态(sync_value_status ---- string)&lt;/blockquote&gt;}" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="693" y="5" width="313" height="165" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-8" value="交互形式: 数据表是通过链接数据源拉出来信息&lt;br&gt;备注: 这里不拉出数据表的信息&lt;br&gt;和主题创建场景类似" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
@@ -130,8 +130,17 @@
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-28" value="&lt;div&gt;cubes:&lt;/div&gt;&lt;div&gt;&amp;nbsp; - name: orders&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # ...&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; measures:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; - name: count&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; sql: id&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; type: count&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; - name: total_amount&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; sql: amount&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; type: sum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="1058" y="342" width="130.5" height="207" as="geometry" />
         </mxCell>
-        <mxCell id="arsLk9QwE6Tpv6ynl3g6-30" value="上线推全&lt;br&gt;删除(删除语义库就整个删除了语义信息)&lt;br&gt;更新" style="whiteSpace=wrap;html=1;rounded=0;align=left;" vertex="1" parent="1">
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-30" value="删除(不删除语义库, 语义可以删除)&lt;br&gt;更新" style="whiteSpace=wrap;html=1;rounded=0;align=left;" vertex="1" parent="1">
           <mxGeometry x="1129" y="189" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="arsLk9QwE6Tpv6ynl3g6-40" target="arsLk9QwE6Tpv6ynl3g6-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-40" value="主题" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="241.5" y="720" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-43" value="增加data-model&lt;br&gt;多选" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="441.5" y="720" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
