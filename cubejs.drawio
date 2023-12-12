@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-12T08:50:40.747Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="gw0lUJHP5n1X1VOXs7Wr" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-12T09:09:10.097Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="iQj-_lIeWb30MIY7ShAP" version="22.1.7" type="github">
   <diagram name="第 1 页" id="1hYo64LuMpDYzzGd4I8e">
     <mxGraphModel dx="1886" dy="820" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -75,8 +75,8 @@
         <mxCell id="4XoDtmQWzFF1k-0LZuOs-7" value="配置语义&lt;br&gt;删除&lt;br&gt;同步状态" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="785" y="189" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4XoDtmQWzFF1k-0LZuOs-9" value="选择主题场景(topic)&lt;br&gt;选择数据库(datasource_id)&lt;br&gt;选择表(sql)&lt;br&gt;描述(description)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="415.75" y="73" width="154.5" height="60" as="geometry" />
+        <mxCell id="4XoDtmQWzFF1k-0LZuOs-9" value="选择主题场景(topic)&lt;br&gt;选择数据库(datasource_id)&lt;br&gt;选择表(sql)或者sql语句二选一,sql语句给出表和字段的提示&lt;br&gt;描述(description)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="354.88" y="73" width="276.25" height="60" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-4" value="语义名称(display_name --- string)&lt;br&gt;语义描述(description --- string)&lt;br&gt;语义类型(term_type --- string measure | dimensions | join)&lt;br&gt;语义别名(alias --- array[string])&lt;br&gt;语义配置(config --- map) {&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;字段操作(sql --- string)&lt;br&gt;主键配置(primary_key --- boolean)&lt;br&gt;tips:如果是通过这个字段来join得设置为主键&lt;br&gt;格式(format --- string)&lt;br&gt;同步状态(sync_value_status ---- string)&lt;/blockquote&gt;}" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="693" y="5" width="313" height="165" as="geometry" />
