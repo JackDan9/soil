@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-12T09:09:10.097Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="iQj-_lIeWb30MIY7ShAP" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-12T09:09:30.646Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="H1XyYIQ5CQG8v5ihz0Wq" version="22.1.7" type="github">
   <diagram name="第 1 页" id="1hYo64LuMpDYzzGd4I8e">
     <mxGraphModel dx="1886" dy="820" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -130,7 +130,7 @@
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-28" value="&lt;div&gt;cubes:&lt;/div&gt;&lt;div&gt;&amp;nbsp; - name: orders&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; # ...&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; measures:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; - name: count&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; sql: id&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; type: count&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; - name: total_amount&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; sql: amount&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; type: sum&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="1058" y="342" width="130.5" height="207" as="geometry" />
         </mxCell>
-        <mxCell id="arsLk9QwE6Tpv6ynl3g6-30" value="删除(不删除语义库, 语义可以删除)&lt;br&gt;更新" style="whiteSpace=wrap;html=1;rounded=0;align=left;" vertex="1" parent="1">
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-30" value="删除(不删除语义库, 语义可以删除)&lt;br&gt;更新&lt;br&gt;创建语义库和语义分开" style="whiteSpace=wrap;html=1;rounded=0;align=left;" vertex="1" parent="1">
           <mxGeometry x="1129" y="189" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="arsLk9QwE6Tpv6ynl3g6-40" target="arsLk9QwE6Tpv6ynl3g6-43">
