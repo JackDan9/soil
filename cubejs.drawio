@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-12T05:43:01.152Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="_mu2gCRMIkIo7HaBR9cZ" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-12T05:49:58.157Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="LdKZZAlmrJCRAM93BJCj" version="22.1.7" type="github">
   <diagram name="第 1 页" id="1hYo64LuMpDYzzGd4I8e">
     <mxGraphModel dx="1434" dy="786" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -32,17 +32,23 @@
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4XoDtmQWzFF1k-0LZuOs-5" target="4XoDtmQWzFF1k-0LZuOs-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4XoDtmQWzFF1k-0LZuOs-5" target="arsLk9QwE6Tpv6ynl3g6-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="4XoDtmQWzFF1k-0LZuOs-5" value="配置语义库" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="618" y="200" width="120" height="34" as="geometry" />
+          <mxGeometry x="618" y="200" width="120" height="39" as="geometry" />
         </mxCell>
         <mxCell id="4XoDtmQWzFF1k-0LZuOs-7" value="配置语义" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="907" y="187" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4XoDtmQWzFF1k-0LZuOs-9" value="选择主题场景(topic)&lt;br&gt;选择数据库(datasource_id)&lt;br&gt;选择表(sql)&lt;br&gt;描述(description)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
-          <mxGeometry x="576.5" y="79" width="203" height="60" as="geometry" />
+          <mxGeometry x="600.75" y="86" width="154.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-4" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="897" y="79" width="336" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-8" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+          <mxGeometry x="618" y="341" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
