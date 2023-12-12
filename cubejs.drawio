@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-12T09:09:51.018Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="lQcfFcsgJjZGNVXBush4" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-12T09:19:27.415Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="BqfEpsnzeGNCmvBBJvJm" version="22.1.7" type="github">
   <diagram name="第 1 页" id="1hYo64LuMpDYzzGd4I8e">
-    <mxGraphModel dx="1886" dy="820" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="786" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -78,7 +78,7 @@
         <mxCell id="4XoDtmQWzFF1k-0LZuOs-9" value="选择主题场景(topic)&lt;br&gt;选择数据库(datasource_id)&lt;br&gt;选择表(sql)或者sql语句二选一,sql语句给出表和字段的提示&lt;br&gt;描述(description)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="332.94" y="73" width="320.12" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="arsLk9QwE6Tpv6ynl3g6-4" value="语义名称(display_name --- string)&lt;br&gt;语义描述(description --- string)&lt;br&gt;语义类型(term_type --- string measure | dimensions | join)&lt;br&gt;语义别名(alias --- array[string])&lt;br&gt;语义配置(config --- map) {&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;字段操作(sql --- string)&lt;br&gt;主键配置(primary_key --- boolean)&lt;br&gt;tips:如果是通过这个字段来join得设置为主键&lt;br&gt;格式(format --- string)&lt;br&gt;同步状态(sync_value_status ---- string)&lt;/blockquote&gt;}" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;align=left;" vertex="1" parent="1">
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-4" value="语义名称(display_name --- string)&lt;br&gt;语义描述(description --- string)&lt;br&gt;语义类型(term_type --- string measure | dimensions | join)&lt;br&gt;语义别名(alias --- array[string])&lt;br&gt;语义配置(config --- map) {&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;字段操作(sql --- string)给出提示&lt;br&gt;主键配置(primary_key --- boolean)&lt;br&gt;tips:如果是通过这个字段来join得设置为主键&lt;br&gt;格式(format --- string)&lt;br&gt;同步状态(sync_value_status ---- string)&lt;/blockquote&gt;}" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="693" y="5" width="313" height="165" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-8" value="交互形式: 数据表是通过链接数据源拉出来信息&lt;br&gt;备注: 这里不拉出数据表的信息&lt;br&gt;和主题创建场景类似" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
@@ -152,6 +152,9 @@
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-45" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="63" y="724" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-48" value="缺少接口&lt;br&gt;1. 全局data-model接口(管理平台)&lt;br&gt;2. 创建data-model接口topic-id在request-body里面(管理平台)&lt;br&gt;3. data-model启用停用接口&lt;br&gt;4. 主题增加data-model字段" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1289" y="371" width="292" height="114" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
