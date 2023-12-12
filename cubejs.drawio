@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-12T07:56:07.271Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="-zyY_cpCq86lwuWVysV7" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-12T07:56:32.984Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="V6auAn0eQ53HjdcRq3Ia" version="22.1.7" type="github">
   <diagram name="第 1 页" id="1hYo64LuMpDYzzGd4I8e">
     <mxGraphModel dx="1434" dy="786" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -63,8 +63,8 @@
         <mxCell id="4XoDtmQWzFF1k-0LZuOs-9" value="选择主题场景(topic)&lt;br&gt;选择数据库(datasource_id)&lt;br&gt;选择表(sql)&lt;br&gt;描述(description)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
           <mxGeometry x="415.75" y="73" width="154.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="arsLk9QwE6Tpv6ynl3g6-4" value="语义名称(display_name --- string)&lt;br&gt;语义描述(description --- string)&lt;br&gt;语义类型(term_type --- string measure | dimensions | join)&lt;br&gt;语义别名(alias --- array[string])&lt;br&gt;语义配置(config --- map){&lt;br&gt;字段操作(sql --- string)&lt;br&gt;主键配置(primary_key --- boolean)&lt;br&gt;格式(format --- string)&lt;br&gt;值实体id(value-entity-id --- number)&lt;br&gt;同步状态(sync_value_status ---- string)&lt;br&gt;}" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="677" y="7" width="336" height="165" as="geometry" />
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-4" value="语义名称(display_name --- string)&lt;br&gt;语义描述(description --- string)&lt;br&gt;语义类型(term_type --- string measure | dimensions | join)&lt;br&gt;语义别名(alias --- array[string])&lt;br&gt;语义配置(config --- map) {&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;字段操作(sql --- string)&lt;br&gt;主键配置(primary_key --- boolean)&lt;br&gt;格式(format --- string)&lt;br&gt;值实体id(value-entity-id --- number)&lt;br&gt;同步状态(sync_value_status ---- string)&lt;/blockquote&gt;}" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="677" y="7" width="313" height="165" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-8" value="交互形式: 数据表是通过链接数据源拉出来信息&lt;br&gt;备注: 这里不拉出数据表的信息&lt;br&gt;和主题创建场景类似" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
           <mxGeometry x="361.5" y="301" width="263" height="60" as="geometry" />
