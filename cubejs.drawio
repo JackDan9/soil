@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-12T09:21:10.308Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="DlNMtzWwx00ghcwA2drp" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-12T09:21:51.981Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="5SpC5Dcs22t25I0WOCiA" version="22.1.7" type="github">
   <diagram name="第 1 页" id="1hYo64LuMpDYzzGd4I8e">
-    <mxGraphModel dx="1434" dy="786" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+    <mxGraphModel dx="1886" dy="820" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -153,7 +153,7 @@
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-45" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="63" y="724" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="arsLk9QwE6Tpv6ynl3g6-48" value="缺少接口&lt;br&gt;1. 全局data-model接口(管理平台)&lt;br&gt;2. 创建data-model接口topic-id在request-body里面(管理平台)&lt;br&gt;3. data-model启用停用接口&lt;br&gt;4. 主题增加data-model字段" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-48" value="需要补充接口&lt;br&gt;1. 全局data-model接口(管理平台)&lt;br&gt;2. 创建data-model接口topic-id在request-body里面(管理平台)&lt;br&gt;3. data-model启用停用接口&lt;br&gt;4. 主题增加data-model字段" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="1289" y="371" width="292" height="114" as="geometry" />
         </mxCell>
       </root>
