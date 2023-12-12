@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-12T07:45:58.700Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="wk3fat6Z11JY6icVx2W5" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-12T07:50:58.748Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="cbblvlY9wJvXg7VlXA6K" version="22.1.7" type="github">
   <diagram name="第 1 页" id="1hYo64LuMpDYzzGd4I8e">
     <mxGraphModel dx="1434" dy="786" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -60,7 +60,7 @@
         <mxCell id="4XoDtmQWzFF1k-0LZuOs-9" value="选择主题场景(topic)&lt;br&gt;选择数据库(datasource_id)&lt;br&gt;选择表(sql)&lt;br&gt;描述(description)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
           <mxGeometry x="415.75" y="73" width="154.5" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="arsLk9QwE6Tpv6ynl3g6-4" value="语义名称(display_name --- string)&lt;br&gt;语义描述(description --- string)&lt;br&gt;语义类型(term_type --- string)&lt;br&gt;语义别名(alias --- array[string])&lt;br&gt;语义配置(config --- map){&lt;br&gt;字段操作(sql --- string)&lt;br&gt;主键配置(primary_key --- boolean)&lt;br&gt;格式(format --- string)&lt;br&gt;值实体id(value-entity-id --- number)&lt;br&gt;同步状态(sync_value_status ---- string)&lt;br&gt;}" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-4" value="语义名称(display_name --- string)&lt;br&gt;语义描述(description --- string)&lt;br&gt;语义类型(term_type --- string measure | dimensions | join)&lt;br&gt;语义别名(alias --- array[string])&lt;br&gt;语义配置(config --- map){&lt;br&gt;字段操作(sql --- string)&lt;br&gt;主键配置(primary_key --- boolean)&lt;br&gt;格式(format --- string)&lt;br&gt;值实体id(value-entity-id --- number)&lt;br&gt;同步状态(sync_value_status ---- string)&lt;br&gt;}" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="677" y="7" width="336" height="165" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-8" value="交互形式: 数据表是通过链接数据源拉出来信息&lt;br&gt;备注: 这里不拉出数据表的信息&lt;br&gt;和主题创建场景类似" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
@@ -70,19 +70,31 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-12" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="83" y="457" width="30" height="60" as="geometry" />
+          <mxGeometry x="63" y="539" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="arsLk9QwE6Tpv6ynl3g6-14" target="arsLk9QwE6Tpv6ynl3g6-20">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-14" value="查看语义库" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="233" y="457" width="120" height="60" as="geometry" />
+          <mxGeometry x="234" y="539" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-17" value="交互形式: 拉出表的字段信息和计算函数进行config的配置" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
           <mxGeometry x="713.5" y="306" width="263" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="arsLk9QwE6Tpv6ynl3g6-20" target="arsLk9QwE6Tpv6ynl3g6-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-20" value="语义库和语义二级表&lt;br&gt;清楚查看语义库下的语义表信息" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="444" y="457" width="120" height="60" as="geometry" />
+          <mxGeometry x="444" y="539" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="arsLk9QwE6Tpv6ynl3g6-22" target="arsLk9QwE6Tpv6ynl3g6-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-22" value="语义结构(Yaml和JavaScript)" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="668" y="539" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-24" value="" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="668" y="458" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
