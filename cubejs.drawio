@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-12T03:25:21.967Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="I7QpGE-iunJ3E1dfa8sR" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-12T03:29:41.000Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="ZS4TCs0nujP5T02iBcVb" version="22.1.7" type="github">
   <diagram name="第 1 页" id="1hYo64LuMpDYzzGd4I8e">
     <mxGraphModel dx="1509" dy="827" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -6,11 +6,6 @@
         <mxCell id="1" parent="0" />
         <mxCell id="4XoDtmQWzFF1k-0LZuOs-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4XoDtmQWzFF1k-0LZuOs-1" target="4XoDtmQWzFF1k-0LZuOs-2">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="4XoDtmQWzFF1k-0LZuOs-4" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4XoDtmQWzFF1k-0LZuOs-3">
-          <mxGeometry x="-0.0908" y="3" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="4XoDtmQWzFF1k-0LZuOs-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="158" y="231" width="30" height="60" as="geometry" />
@@ -25,10 +20,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4XoDtmQWzFF1k-0LZuOs-5" value="配置语义库" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="547" y="135" width="120" height="60" as="geometry" />
+          <mxGeometry x="558" y="174" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4XoDtmQWzFF1k-0LZuOs-7" value="配置语义" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="756" y="135" width="120" height="60" as="geometry" />
+          <mxGeometry x="777" y="174" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4XoDtmQWzFF1k-0LZuOs-9" value="选择主题场景(topic)&lt;br&gt;选择数据库(datasource_id)&lt;br&gt;选择表(sql)" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="516.5" y="78" width="203" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
