@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-12T12:29:32.588Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="czAVgqNGqQcP3pref07M" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-12T12:30:23.849Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="AaJD9gLDXT7SG2XmSu_8" version="22.1.7" type="github">
   <diagram name="第 1 页" id="1hYo64LuMpDYzzGd4I8e">
     <mxGraphModel dx="1434" dy="786" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
@@ -157,15 +157,18 @@
           <mxGeometry x="1289" y="371" width="292" height="114" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-49" value="&amp;nbsp;CDH Hadoop 3.3.4" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="459" y="1197" width="120" height="60" as="geometry" />
+          <mxGeometry x="585" y="1236" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-50" value="ambari hadoop 3.3.4(国内开源团队)&lt;br&gt;yarn submit 信息&lt;br&gt;&amp;nbsp;FsTrace" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="471" y="1372" width="293" height="60" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-52" value="&amp;nbsp;CDH Hadoop 2.x" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="459" y="1127" width="120" height="60" as="geometry" />
+          <mxGeometry x="580" y="1083" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="arsLk9QwE6Tpv6ynl3g6-53" target="arsLk9QwE6Tpv6ynl3g6-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arsLk9QwE6Tpv6ynl3g6-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="arsLk9QwE6Tpv6ynl3g6-53" target="arsLk9QwE6Tpv6ynl3g6-49">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="arsLk9QwE6Tpv6ynl3g6-53" value="hadoop jar 2.x" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
