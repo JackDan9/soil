@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-21T06:11:15.261Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="NAaLYLY2TROMQrRhyg-9" version="22.1.11" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-29T09:48:23.955Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="dgAAW6nAL69ferx_v0Nl" version="22.1.11" type="github">
   <diagram name="第 1 页" id="1hYo64LuMpDYzzGd4I8e">
-    <mxGraphModel dx="954" dy="606" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+    <mxGraphModel dx="1674" dy="786" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -193,6 +193,179 @@
         </mxCell>
         <mxCell id="tBXLiaRZD2iZ0NIXH2bB-4" value="executor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="264" y="1990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-5" target="tBXLiaRZD2iZ0NIXH2bB-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-34" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;K8S的路线&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBXLiaRZD2iZ0NIXH2bB-33">
+          <mxGeometry x="0.0355" y="-1" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-5" value="license plus sdk" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="695" y="2575" width="210" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-6" value="marionette" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="128.5" y="2532" width="285.5" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-7" target="tBXLiaRZD2iZ0NIXH2bB-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-7" value="新创建、更新、暂停和删除时" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="215" y="2551" width="181.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.005;entryY=0.57;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-7" target="tBXLiaRZD2iZ0NIXH2bB-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-9" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;调用quota 接口进行分配，释放和更新&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBXLiaRZD2iZ0NIXH2bB-8">
+          <mxGeometry x="-0.0589" y="-2" relative="1" as="geometry">
+            <mxPoint x="2" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.298;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-5" target="tBXLiaRZD2iZ0NIXH2bB-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="269" y="2652" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-20" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;获取license健康状态和资源剩余情况是否充足&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBXLiaRZD2iZ0NIXH2bB-19">
+          <mxGeometry x="0.209" y="-3" relative="1" as="geometry">
+            <mxPoint x="149" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-21" target="tBXLiaRZD2iZ0NIXH2bB-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-21" value="已有的notebook环境，因为在notebook-env表中已经存起来了资源信息的消耗" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="181" y="2690" width="217" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-22" value="会在notebook-env表中存和更新这部分license信息&lt;br&gt;保证license信息是最新的&lt;br&gt;{licenseName: &#39;studio&#39;, cpu: 1, memort:4,... }" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160.25" y="2367" width="291" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-24" value="[{&quot;resourceType&quot;:&quot;CPU&quot;,&quot;limits&quot;:&quot;1&quot;,&quot;extension&quot;:null},{&quot;resourceType&quot;:&quot;MEMORY&quot;,&quot;limits&quot;:&quot;4Gi&quot;,&quot;extension&quot;:null}]&lt;br&gt;判断是否存在license信息，然后去轮询更新资源到license中" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="111.5" y="2843" width="356" height="97" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-27" target="tBXLiaRZD2iZ0NIXH2bB-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="649" y="2482" />
+              <mxPoint x="413" y="2482" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-31" value="控制走不走license逻辑，默认走" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBXLiaRZD2iZ0NIXH2bB-30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-27" value="configmap中设置一个参数license,控制走不走license逻辑，不设置默认是走license逻辑" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="523" y="2374" width="252" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-32" target="tBXLiaRZD2iZ0NIXH2bB-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1237" y="2567" />
+              <mxPoint x="1031" y="2567" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-49" value="license_name" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBXLiaRZD2iZ0NIXH2bB-42">
+          <mxGeometry x="0.3378" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-32" target="tBXLiaRZD2iZ0NIXH2bB-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-50" value="app_name" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBXLiaRZD2iZ0NIXH2bB-43">
+          <mxGeometry x="0.0621" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-32" target="tBXLiaRZD2iZ0NIXH2bB-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1237" y="2527" />
+              <mxPoint x="1324" y="2527" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-51" value="resource_id" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBXLiaRZD2iZ0NIXH2bB-44">
+          <mxGeometry x="0.3667" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-32" target="tBXLiaRZD2iZ0NIXH2bB-38">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1237" y="2563" />
+              <mxPoint x="1507" y="2563" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-52" value="metric_name" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBXLiaRZD2iZ0NIXH2bB-45">
+          <mxGeometry x="-0.0765" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-32" target="tBXLiaRZD2iZ0NIXH2bB-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1237" y="2727" />
+              <mxPoint x="1585" y="2727" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-54" value="labels" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBXLiaRZD2iZ0NIXH2bB-48">
+          <mxGeometry x="-0.7077" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-55" value="status" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBXLiaRZD2iZ0NIXH2bB-48">
+          <mxGeometry x="0.0348" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-32" value="在license-controller库中records表增加一条记录" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1084" y="2599" width="306" height="87" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-35" value="license_name&lt;br&gt;studio || kernel" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="971" y="2446" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-36" value="app_name&lt;br&gt;marionatte" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1109" y="2446" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-37" value="resource_id&lt;br&gt;资源的唯一标识 pas是部署ID(deploy里面的labels中有deploy的ID值)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1247" y="2446" width="154" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-38" value="metric_name&lt;br&gt;resource_requests_cpu_cores&lt;br&gt;resource_requests_mem_cores&lt;br&gt;resource_requests_gpu_cores&lt;br&gt;resource_requests_vgpu_cores&lt;br&gt;resource_requests_npu_cores" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1415" y="2407" width="184" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-39" value="value&lt;br&gt;metric_name类型的具体值" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="971" y="2769" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-40" value="labels&lt;br&gt;{&quot;aios.4pd.io/class&quot;:&quot;nb-batch-predictor&quot;,&quot;aios.4pd.io/platform&quot;:&quot;K8S&quot;,&quot;aios.4pd.io/sage-namespace&quot;:&quot;prophet-resource-4pdadmin&quot;,&quot;aios.4pd.io/service-name&quot;:&quot;50494154-0ad8-4f7e-a307-342561574852&quot;,&quot;aios.4pd.io/service-type&quot;:&quot;Instance&quot;,&quot;aios.4pd.io/user&quot;:&quot;4pdadmin&quot;,&quot;aios.4pd.io/workspace-id&quot;:&quot;1&quot;}" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1109" y="2769" width="398" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-41" value="status&lt;br&gt;released-释放&lt;br&gt;allocated-分配&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1525" y="2769" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.558;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-32" target="tBXLiaRZD2iZ0NIXH2bB-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-53" value="value" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBXLiaRZD2iZ0NIXH2bB-46">
+          <mxGeometry x="0.0388" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBXLiaRZD2iZ0NIXH2bB-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.52;entryY=0.026;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tBXLiaRZD2iZ0NIXH2bB-32" target="tBXLiaRZD2iZ0NIXH2bB-40">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1237" y="2727" />
+              <mxPoint x="1316" y="2727" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
